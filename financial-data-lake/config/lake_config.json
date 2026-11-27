@@ -1,0 +1,33 @@
+{
+  "config_version": "1.0.0",
+  "lake_name": "saat-financial-data-lake-proto",
+  "environment": "local-prototype",
+  "storage": {
+    "raw_prefix": "raw",
+    "normalized_prefix": "normalized",
+    "curated_prefix": "curated",
+    "snapshots_prefix": "snapshots",
+    "quarantine_prefix": "quarantine",
+    "parquet_compression": "snappy",
+    "checksum_algorithm": "sha256"
+  },
+  "quality": {
+    "max_null_ratio": 0.0,
+    "require_utc_timestamps": true,
+    "require_availability_ge_event": true,
+    "max_price_spike_ratio": 5.0,
+    "reject_on_critical_failure": true
+  },
+  "retention": {
+    "raw_retention_days": 2555,
+    "normalized_retention_days": 2555,
+    "curated_retention_days": 2555,
+    "snapshot_retention_days": 1825,
+    "allow_destructive_history_rewrite": false,
+    "archival_mode": "cold_tier_immutable"
+  },
+  "execution_controls": {
+    "order_execution_enabled": false,
+    "allow_redistribution": false
+  }
+}

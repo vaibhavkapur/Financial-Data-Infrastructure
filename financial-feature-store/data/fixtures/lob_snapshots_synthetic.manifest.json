@@ -1,0 +1,13 @@
+{
+  "currency": "USD",
+  "dataset_name": "l1_order_book_snapshots",
+  "entitlement": "synthetic-internal",
+  "generated_at": "2026-11-27T09:49:16.543783+00:00",
+  "license": "internal-synthetic",
+  "row_count": 180,
+  "schema_hash": "42911c6639c36bf5",
+  "seed": 42,
+  "sha256_checksum": "84a3380327f8362eeac2ceb612d86bcbade24072f507fb62a8e8d5d7d9ca511b",
+  "source_id": "src_lob_synthetic",
+  "source_version": "2026.01.15-r1"
+}

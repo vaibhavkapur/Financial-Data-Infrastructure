@@ -1,0 +1,28 @@
+{
+  "config_version": "1.0.0",
+  "environment": "local-prototype",
+  "storage": {
+    "offline_root": "data/offline",
+    "export_root": "data/exports",
+    "online_sqlite_path": "data/online/online_store.sqlite3",
+    "registry_path": "data/registry/feature_registry.json"
+  },
+  "governance": {
+    "max_active_features_per_view": 25,
+    "max_total_active_features": 100,
+    "require_owner": true,
+    "require_source_provenance": true,
+    "allow_order_execution": false
+  },
+  "serving": {
+    "default_ttl_seconds": 300.0,
+    "default_stale_policy": "reject",
+    "default_parity_atol": 1e-9,
+    "default_parity_rtol": 1e-9
+  },
+  "quality": {
+    "default_max_null_ratio": 0.05,
+    "default_max_late_arrival_seconds": 60.0,
+    "block_promotion_on_failure": true
+  }
+}

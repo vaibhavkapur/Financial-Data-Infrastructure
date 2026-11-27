@@ -1,0 +1,29 @@
+test_archive_round_trip_and_restart (integration.test_pipeline.Pipeline) ... ok
+test_cli_curated_export_and_denial (integration.test_pipeline.Pipeline) ... ok
+test_concurrent_workers_commit_page_once (integration.test_pipeline.Pipeline) ... ok
+test_registry_replay_and_rollback (integration.test_pipeline.Pipeline) ... ok
+test_transaction_recovery (integration.test_pipeline.Pipeline) ... ok
+test_conflicting_revision_is_quarantined (scenarios.test_operations.Operations) ... ok
+test_corrupt_payload_archived_and_recoverable (scenarios.test_operations.Operations) ... ok
+test_duplicate_article_and_ambiguous_entity (scenarios.test_operations.Operations) ... ok
+test_expiration_checked_even_for_historical_export (scenarios.test_operations.Operations) ... ok
+test_historical_license_survives_policy_change (scenarios.test_operations.Operations) ... ok
+test_late_publication_and_embargo (scenarios.test_operations.Operations) ... ok
+test_missing_page_blocks_later_pages (scenarios.test_operations.Operations) ... ok
+test_outage_and_resume (scenarios.test_operations.Operations) ... ok
+test_publication_after_early_delivery (scenarios.test_operations.Operations) ... ok
+test_rate_limit_retry_after (scenarios.test_operations.Operations) ... ok
+test_revised_macro_series_and_missingness (scenarios.test_operations.Operations) ... ok
+test_revocation_during_fetch (scenarios.test_operations.Operations) ... ok
+test_revoked_entitlement_and_source_removal (scenarios.test_operations.Operations) ... ok
+test_malformed_json_rejected (unit.test_contracts.Contracts) ... ok
+test_missing_value_keeps_reason (unit.test_contracts.Contracts) ... ok
+test_registry_rejects_unsafe_source_ids (unit.test_contracts.Contracts) ... ok
+test_times_require_offsets_and_normalize_to_utc (unit.test_contracts.Contracts) ... ok
+test_values_units_and_versions (unit.test_contracts.Contracts) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.243s
+
+OK
+Point-in-time exports, source health and raw hashes match the retained demo.

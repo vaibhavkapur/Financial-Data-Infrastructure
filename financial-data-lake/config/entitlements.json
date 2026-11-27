@@ -1,0 +1,89 @@
+{
+  "registry_version": "1.0.0",
+  "entitlements": [
+    {
+      "dataset_id": "market_ticks",
+      "source_vendor": "saat-synthetic-feed",
+      "license_id": "SYNTH-INTERNAL-001",
+      "license_terms": "Synthetic tick dataset generated for local prototype and CI validation. Internal research and testing only.",
+      "permitted_roles": ["data_engineer", "quant_research", "system_recovery", "auditor"],
+      "permitted_purposes": ["ingest", "research", "backtest", "validation", "recovery", "audit"],
+      "redistribution_allowed": false,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "expires_at": "2030-12-31T23:59:59Z",
+      "classification": "internal_synthetic"
+    },
+    {
+      "dataset_id": "reference_instruments",
+      "source_vendor": "saat-synthetic-ref",
+      "license_id": "SYNTH-INTERNAL-002",
+      "license_terms": "Synthetic instrument master and exchange metadata. Internal use only.",
+      "permitted_roles": ["data_engineer", "quant_research", "system_recovery", "auditor"],
+      "permitted_purposes": ["ingest", "research", "backtest", "validation", "recovery", "audit"],
+      "redistribution_allowed": false,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "expires_at": "2030-12-31T23:59:59Z",
+      "classification": "internal_synthetic"
+    },
+    {
+      "dataset_id": "prices_eod",
+      "source_vendor": "saat-synthetic-eod",
+      "license_id": "SYNTH-INTERNAL-003",
+      "license_terms": "Synthetic end-of-day OHLCV bars in USD. Internal use only.",
+      "permitted_roles": ["data_engineer", "quant_research", "system_recovery", "auditor"],
+      "permitted_purposes": ["ingest", "research", "backtest", "validation", "recovery", "audit"],
+      "redistribution_allowed": false,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "expires_at": "2030-12-31T23:59:59Z",
+      "classification": "internal_synthetic"
+    },
+    {
+      "dataset_id": "corporate_actions",
+      "source_vendor": "saat-synthetic-corpact",
+      "license_id": "SYNTH-INTERNAL-004",
+      "license_terms": "Synthetic corporate action records (splits and cash dividends). Internal use only.",
+      "permitted_roles": ["data_engineer", "quant_research", "system_recovery", "auditor"],
+      "permitted_purposes": ["ingest", "research", "backtest", "validation", "recovery", "audit"],
+      "redistribution_allowed": false,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "expires_at": "2030-12-31T23:59:59Z",
+      "classification": "internal_synthetic"
+    },
+    {
+      "dataset_id": "fundamentals",
+      "source_vendor": "saat-synthetic-filings",
+      "license_id": "SYNTH-INTERNAL-005",
+      "license_terms": "Synthetic quarterly fundamental filings and restatements. Internal use only.",
+      "permitted_roles": ["data_engineer", "quant_research", "system_recovery", "auditor"],
+      "permitted_purposes": ["ingest", "research", "backtest", "validation", "recovery", "audit"],
+      "redistribution_allowed": false,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "expires_at": "2030-12-31T23:59:59Z",
+      "classification": "internal_synthetic"
+    },
+    {
+      "dataset_id": "alt_sentiment",
+      "source_vendor": "project-19-altdata-partner",
+      "license_id": "RESTRICTED-ALT-019",
+      "license_terms": "Restricted alternative sentiment feed supplied under #19 contract. Restricted to approved quant_research role only; no redistribution.",
+      "permitted_roles": ["quant_research", "data_engineer"],
+      "permitted_purposes": ["ingest", "research", "validation"],
+      "redistribution_allowed": false,
+      "effective_from": "2024-01-01T00:00:00Z",
+      "expires_at": "2030-12-31T23:59:59Z",
+      "classification": "restricted_alternative"
+    },
+    {
+      "dataset_id": "legacy_expired_feed",
+      "source_vendor": "deprecated-vendor",
+      "license_id": "EXPIRED-000",
+      "license_terms": "Expired historical trial feed. Access must be denied.",
+      "permitted_roles": ["quant_research"],
+      "permitted_purposes": ["research"],
+      "redistribution_allowed": false,
+      "effective_from": "2022-01-01T00:00:00Z",
+      "expires_at": "2023-12-31T23:59:59Z",
+      "classification": "expired"
+    }
+  ]
+}

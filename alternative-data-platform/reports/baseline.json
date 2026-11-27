@@ -1,0 +1,22 @@
+{
+  "python": "3.9.6",
+  "sqlite": "3.51.0",
+  "system": "Darwin",
+  "release": "25.5.0",
+  "machine": "arm64",
+  "scope": "fixture copy, registry setup, four pages, two idle polls, exports and health",
+  "sources": 2,
+  "pages": 4,
+  "raw_input_rows": 6,
+  "retained_revisions": 4,
+  "elapsed_ms": [
+    10.992,
+    7.849,
+    9.89,
+    13.451,
+    8.917,
+    8.745,
+    7.947
+  ],
+  "median_ms": 8.917
+}

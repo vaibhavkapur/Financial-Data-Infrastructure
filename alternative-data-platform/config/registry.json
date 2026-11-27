@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "version": 1,
+  "sources": {
+    "macro": {
+      "connector": "macro",
+      "enabled": true,
+      "license_id": "fixture-macro-v1",
+      "terms": "Synthetic fixture. Internal research and demonstration only. No redistribution.",
+      "provenance": "Generated for this repository. Fictional Northland labor index.",
+      "export_purposes": [
+        "research",
+        "demo"
+      ],
+      "valid_until": "2099-01-01T00:00:00Z",
+      "entities": {
+        "northland": [
+          "country-NL-fixture"
+        ]
+      },
+      "units": {
+        "LABOR": "index_points"
+      }
+    },
+    "news": {
+      "connector": "news",
+      "enabled": true,
+      "license_id": "fixture-news-v1",
+      "terms": "Synthetic fixture. Internal demonstration only. No redistribution.",
+      "provenance": "Original fictional headlines written for this repository.",
+      "export_purposes": [
+        "demo"
+      ],
+      "valid_until": "2099-01-01T00:00:00Z",
+      "entities": {
+        "aster labs": [
+          "company-aster"
+        ],
+        "aster": [
+          "company-aster",
+          "company-aster-holdings"
+        ]
+      }
+    }
+  }
+}

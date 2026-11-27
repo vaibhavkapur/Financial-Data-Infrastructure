@@ -1,0 +1,154 @@
+{
+  "registry_version": "1.0.0",
+  "datasets": {
+    "market_ticks": {
+      "current_version": 1,
+      "primary_key": ["instrument_id", "tick_id", "revision_number"],
+      "dedupe_key": ["instrument_id", "tick_id", "revision_number"],
+      "partition_columns": ["event_date"],
+      "versions": {
+        "1": {
+          "fields": [
+            {"name": "tick_id", "type": "string", "nullable": false},
+            {"name": "instrument_id", "type": "string", "nullable": false},
+            {"name": "symbol", "type": "string", "nullable": false},
+            {"name": "event_ts", "type": "timestamp_us_utc", "nullable": false},
+            {"name": "available_at", "type": "timestamp_us_utc", "nullable": false},
+            {"name": "event_date", "type": "string", "nullable": false},
+            {"name": "price", "type": "float64", "nullable": false},
+            {"name": "size", "type": "float64", "nullable": false},
+            {"name": "currency", "type": "string", "nullable": false},
+            {"name": "venue", "type": "string", "nullable": false},
+            {"name": "side", "type": "string", "nullable": false},
+            {"name": "revision_number", "type": "int32", "nullable": false},
+            {"name": "correction_of", "type": "string", "nullable": true},
+            {"name": "source_system", "type": "string", "nullable": false}
+          ]
+        }
+      }
+    },
+    "reference_instruments": {
+      "current_version": 1,
+      "primary_key": ["instrument_id", "revision_number"],
+      "dedupe_key": ["instrument_id", "revision_number"],
+      "partition_columns": ["effective_date"],
+      "versions": {
+        "1": {
+          "fields": [
+            {"name": "instrument_id", "type": "string", "nullable": false},
+            {"name": "symbol", "type": "string", "nullable": false},
+            {"name": "name", "type": "string", "nullable": false},
+            {"name": "asset_class", "type": "string", "nullable": false},
+            {"name": "exchange", "type": "string", "nullable": false},
+            {"name": "currency", "type": "string", "nullable": false},
+            {"name": "lot_size", "type": "int32", "nullable": false},
+            {"name": "status", "type": "string", "nullable": false},
+            {"name": "event_ts", "type": "timestamp_us_utc", "nullable": false},
+            {"name": "available_at", "type": "timestamp_us_utc", "nullable": false},
+            {"name": "effective_date", "type": "string", "nullable": false},
+            {"name": "revision_number", "type": "int32", "nullable": false}
+          ]
+        }
+      }
+    },
+    "prices_eod": {
+      "current_version": 1,
+      "primary_key": ["instrument_id", "trade_date", "revision_number"],
+      "dedupe_key": ["instrument_id", "trade_date", "revision_number"],
+      "partition_columns": ["trade_date"],
+      "versions": {
+        "1": {
+          "fields": [
+            {"name": "instrument_id", "type": "string", "nullable": false},
+            {"name": "symbol", "type": "string", "nullable": false},
+            {"name": "trade_date", "type": "string", "nullable": false},
+            {"name": "open", "type": "float64", "nullable": false},
+            {"name": "high", "type": "float64", "nullable": false},
+            {"name": "low", "type": "float64", "nullable": false},
+            {"name": "close", "type": "float64", "nullable": false},
+            {"name": "volume", "type": "float64", "nullable": false},
+            {"name": "currency", "type": "string", "nullable": false},
+            {"name": "unit", "type": "string", "nullable": false},
+            {"name": "event_ts", "type": "timestamp_us_utc", "nullable": false},
+            {"name": "available_at", "type": "timestamp_us_utc", "nullable": false},
+            {"name": "revision_number", "type": "int32", "nullable": false},
+            {"name": "correction_reason", "type": "string", "nullable": true}
+          ]
+        }
+      }
+    },
+    "corporate_actions": {
+      "current_version": 1,
+      "primary_key": ["action_id", "revision_number"],
+      "dedupe_key": ["action_id", "revision_number"],
+      "partition_columns": ["ex_date"],
+      "versions": {
+        "1": {
+          "fields": [
+            {"name": "action_id", "type": "string", "nullable": false},
+            {"name": "instrument_id", "type": "string", "nullable": false},
+            {"name": "symbol", "type": "string", "nullable": false},
+            {"name": "action_type", "type": "string", "nullable": false},
+            {"name": "ex_date", "type": "string", "nullable": false},
+            {"name": "record_date", "type": "string", "nullable": false},
+            {"name": "pay_date", "type": "string", "nullable": true},
+            {"name": "split_numerator", "type": "float64", "nullable": true},
+            {"name": "split_denominator", "type": "float64", "nullable": true},
+            {"name": "cash_amount", "type": "float64", "nullable": true},
+            {"name": "currency", "type": "string", "nullable": false},
+            {"name": "event_ts", "type": "timestamp_us_utc", "nullable": false},
+            {"name": "available_at", "type": "timestamp_us_utc", "nullable": false},
+            {"name": "revision_number", "type": "int32", "nullable": false}
+          ]
+        }
+      }
+    },
+    "fundamentals": {
+      "current_version": 1,
+      "primary_key": ["instrument_id", "fiscal_period", "metric_name", "revision_number"],
+      "dedupe_key": ["instrument_id", "fiscal_period", "metric_name", "revision_number"],
+      "partition_columns": ["fiscal_period"],
+      "versions": {
+        "1": {
+          "fields": [
+            {"name": "filing_id", "type": "string", "nullable": false},
+            {"name": "instrument_id", "type": "string", "nullable": false},
+            {"name": "symbol", "type": "string", "nullable": false},
+            {"name": "fiscal_period", "type": "string", "nullable": false},
+            {"name": "period_end_date", "type": "string", "nullable": false},
+            {"name": "metric_name", "type": "string", "nullable": false},
+            {"name": "metric_value", "type": "float64", "nullable": false},
+            {"name": "unit", "type": "string", "nullable": false},
+            {"name": "currency", "type": "string", "nullable": false},
+            {"name": "event_ts", "type": "timestamp_us_utc", "nullable": false},
+            {"name": "available_at", "type": "timestamp_us_utc", "nullable": false},
+            {"name": "revision_number", "type": "int32", "nullable": false},
+            {"name": "is_restatement", "type": "bool", "nullable": false}
+          ]
+        }
+      }
+    },
+    "alt_sentiment": {
+      "current_version": 1,
+      "primary_key": ["signal_id", "revision_number"],
+      "dedupe_key": ["signal_id", "revision_number"],
+      "partition_columns": ["event_date"],
+      "versions": {
+        "1": {
+          "fields": [
+            {"name": "signal_id", "type": "string", "nullable": false},
+            {"name": "instrument_id", "type": "string", "nullable": false},
+            {"name": "symbol", "type": "string", "nullable": false},
+            {"name": "sentiment_score", "type": "float64", "nullable": false},
+            {"name": "confidence", "type": "float64", "nullable": false},
+            {"name": "source_feed", "type": "string", "nullable": false},
+            {"name": "event_ts", "type": "timestamp_us_utc", "nullable": false},
+            {"name": "available_at", "type": "timestamp_us_utc", "nullable": false},
+            {"name": "event_date", "type": "string", "nullable": false},
+            {"name": "revision_number", "type": "int32", "nullable": false}
+          ]
+        }
+      }
+    }
+  }
+}

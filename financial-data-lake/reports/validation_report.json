@@ -1,0 +1,96 @@
+{
+  "generated_at": "2026-11-27T09:49:07.010398+00:00",
+  "ruff": {
+    "returncode": 0,
+    "stdout": "All checks passed!",
+    "stderr": ""
+  },
+  "pytest": {
+    "returncode": 0,
+    "summary_lines": [
+      "platform darwin -- Python 3.12.15, pytest-8.4.2, pluggy-1.7.0",
+      "rootdir: /Users/vaibhavkapur/Desktop/existing/financial-data-lake",
+      "configfile: pyproject.toml",
+      "testpaths: tests",
+      "collected 30 items",
+      "",
+      "tests/integration/test_adapters_and_ingest.py ....                       [ 13%]",
+      "tests/integration/test_as_of_and_recovery.py ..                          [ 20%]",
+      "tests/scenarios/test_required_scenarios.py .......                       [ 43%]",
+      "tests/unit/test_entitlements_and_catalog.py .....                        [ 60%]",
+      "tests/unit/test_models_and_schemas.py .......                            [ 83%]",
+      "tests/unit/test_quality_rules.py ..                                      [ 90%]",
+      "tests/unit/test_storage_and_checksums.py ...                             [100%]",
+      "",
+      "============================== 30 passed in 0.97s =============================="
+    ]
+  },
+  "demo": {
+    "m1_m2_ingest": {
+      "datasets_ingested": 7,
+      "total_curated_rows": 27,
+      "duplicates_removed_first_pass": 2,
+      "second_pass_all_idempotent": true
+    },
+    "m3_bitemporal_and_controls": {
+      "tick_price_before_correction": 200.5,
+      "tick_price_after_correction": 200.1,
+      "aapl_20240604_adj_close_before_split_avail": 200.0,
+      "aapl_20240604_adj_close_after_split_avail": 100.0,
+      "msft_20240605_adj_close_after_div_avail": 398.0,
+      "aapl_revenue_before_restatement": 90753000000.0,
+      "aapl_revenue_after_restatement": 90120000000.0,
+      "schema_evolved_to_version": 2,
+      "breaking_schema_rejected": true,
+      "unauthorized_dataset_blocked": true
+    },
+    "m4_recovery_and_snapshots": {
+      "snapshot_id": "snap-23bee17be3f5",
+      "snapshot_manifest_sha256": "7df56f8208a609ccd8be6b93f8081c3a906dc2dfcebfb87e8c56798a431d50cd",
+      "corrupt_partition_detected": true,
+      "corrupt_count_before_recovery": 1,
+      "corrupt_count_after_recovery": 0,
+      "quarantine_path": "quarantine/curated/prices_eod/trade_date=2024-06-03/v1_run-9e8462f28a44.parquet",
+      "recovered_rows": 1,
+      "snapshot_digest_baseline": "ef63b8ff5811ad799861bfa5adb76d13615ee8ae2cd17efc25ef09f7905602c2",
+      "snapshot_digest_replayed": "ef63b8ff5811ad799861bfa5adb76d13615ee8ae2cd17efc25ef09f7905602c2",
+      "snapshot_reproduction_exact_match": true,
+      "retention_destructive_rewrite_allowed": false,
+      "retention_cold_archive_candidates_2035": 33
+    },
+    "metrics_counters": {
+      "ingest.completed": 8,
+      "ingest.idempotent_skip": 7,
+      "query.as_of": 10,
+      "schema.evolved": 1,
+      "snapshot.created": 1,
+      "snapshot.reproduced": 1,
+      "storage.corrupt_partition_detected": 1,
+      "integrity.corrupt_detected": 1,
+      "recovery.partition_recovered": 1,
+      "recovery.replay_completed": 1
+    }
+  },
+  "notebook_verification": {
+    "notebook": "research_as_of_demo.ipynb",
+    "code_cells_executed": 4,
+    "passed": true
+  },
+  "baseline_microbenchmark": {
+    "environment": {
+      "python_version": "3.12.15",
+      "platform": "macOS-26.5.1-arm64-arm-64bit",
+      "machine": "arm64"
+    },
+    "sample_size_ticks": 2000,
+    "ingested_rows": 2000,
+    "ingest_wall_ms": 24.08,
+    "ingest_rows_per_sec": 83041.0,
+    "as_of_query_runs": 5,
+    "as_of_rows_returned": 1001,
+    "as_of_query_min_ms": 83.52,
+    "as_of_query_median_ms": 86.41,
+    "as_of_query_max_ms": 88.35,
+    "note": "Local prototype baseline on synthetic data; not a claim of production SLA."
+  }
+}

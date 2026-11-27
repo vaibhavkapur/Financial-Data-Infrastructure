@@ -1,0 +1,30 @@
+{
+  "caveat": "Local prototype baseline measurements on synthetic fixtures; do not extrapolate to production live trading latency or throughput.",
+  "environment": {
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "polars": "2.2.0",
+    "python": "3.12.15"
+  },
+  "offline_materialization": {
+    "elapsed_ms": 10.071,
+    "input_rows": 1000
+  },
+  "online_serving": {
+    "in_memory": {
+      "latency_ms_p50": 0.007,
+      "latency_ms_p95": 0.008,
+      "latency_ms_p99": 0.0464,
+      "sample_size": 500
+    },
+    "sqlite": {
+      "latency_ms_p50": 0.078,
+      "latency_ms_p95": 0.1057,
+      "latency_ms_p99": 0.8019,
+      "sample_size": 500
+    }
+  },
+  "point_in_time_join": {
+    "elapsed_ms": 130.036,
+    "spine_rows": 950
+  }
+}

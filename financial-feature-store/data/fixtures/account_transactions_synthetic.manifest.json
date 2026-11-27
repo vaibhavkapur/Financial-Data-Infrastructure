@@ -1,0 +1,13 @@
+{
+  "currency": "USD",
+  "dataset_name": "account_transactions",
+  "entitlement": "synthetic-internal",
+  "generated_at": "2026-11-27T09:49:16.544745+00:00",
+  "license": "internal-synthetic",
+  "row_count": 120,
+  "schema_hash": "6f569bad76fd0069",
+  "seed": 42,
+  "sha256_checksum": "109287c105a1425822ffa7059bc6f37802a9878631872ede5704f777376fa228",
+  "source_id": "src_tx_synthetic",
+  "source_version": "2026.01.15-r1"
+}

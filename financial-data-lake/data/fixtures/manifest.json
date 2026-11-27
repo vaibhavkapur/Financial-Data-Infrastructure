@@ -1,0 +1,84 @@
+{
+  "manifest_version": "1.0.0",
+  "generated_by": "financial-data-lake-fixture-generator",
+  "redistribution_allowed": false,
+  "fixtures": [
+    {
+      "file": "reference_instruments.jsonl",
+      "dataset_id": "reference_instruments",
+      "format": "canonical_jsonl",
+      "source_vendor": "saat-synthetic-ref",
+      "license_id": "SYNTH-INTERNAL-002",
+      "provenance": "synthetic-deterministic-seed-42",
+      "record_count": 3,
+      "byte_size": 943,
+      "sha256": "2b51750d8407262f6782ef56986bfcb1643487072de0d160a7aaa7cc503ecc7d"
+    },
+    {
+      "file": "ticks.jsonl",
+      "dataset_id": "market_ticks",
+      "format": "canonical_jsonl",
+      "source_vendor": "saat-synthetic-feed",
+      "license_id": "SYNTH-INTERNAL-001",
+      "provenance": "synthetic-deterministic-seed-42",
+      "record_count": 6,
+      "byte_size": 2194,
+      "sha256": "822533aaa80f62067baa33d2f863b8f142498737c43291d2b94042f99884a3b0"
+    },
+    {
+      "file": "clickhouse_ticks.jsonl",
+      "dataset_id": "market_ticks",
+      "format": "clickhouse_json_each_row",
+      "source_vendor": "saat-synthetic-feed",
+      "license_id": "SYNTH-INTERNAL-001",
+      "provenance": "synthetic-deterministic-seed-42",
+      "record_count": 3,
+      "byte_size": 627,
+      "sha256": "eab3640af1b32e8012b9d042c2d989c52f27360137ec0044c4244ee7ddc8790b"
+    },
+    {
+      "file": "prices_eod.jsonl",
+      "dataset_id": "prices_eod",
+      "format": "canonical_jsonl",
+      "source_vendor": "saat-synthetic-eod",
+      "license_id": "SYNTH-INTERNAL-003",
+      "provenance": "synthetic-deterministic-seed-42",
+      "record_count": 8,
+      "byte_size": 2577,
+      "sha256": "a492ed1141d5210bf529050458fa95ff1c857cce0fc5b4d86c20e25eae705123"
+    },
+    {
+      "file": "corporate_actions.jsonl",
+      "dataset_id": "corporate_actions",
+      "format": "canonical_jsonl",
+      "source_vendor": "saat-synthetic-corpact",
+      "license_id": "SYNTH-INTERNAL-004",
+      "provenance": "synthetic-deterministic-seed-42",
+      "record_count": 2,
+      "byte_size": 767,
+      "sha256": "2b3093ea7a1e02c60ff5b4c34e8c184b440440325f0b112e5159bea1f6d1c8a8"
+    },
+    {
+      "file": "fundamentals.jsonl",
+      "dataset_id": "fundamentals",
+      "format": "canonical_jsonl",
+      "source_vendor": "saat-synthetic-filings",
+      "license_id": "SYNTH-INTERNAL-005",
+      "provenance": "synthetic-deterministic-seed-42",
+      "record_count": 5,
+      "byte_size": 1798,
+      "sha256": "ad80d171c067acba2c8ee7642399641203f31018cf4866e46f663d2bbe582edd"
+    },
+    {
+      "file": "alt_sentiment.jsonl",
+      "dataset_id": "alt_sentiment",
+      "format": "canonical_jsonl",
+      "source_vendor": "project-19-altdata-partner",
+      "license_id": "RESTRICTED-ALT-019",
+      "provenance": "synthetic-deterministic-seed-42",
+      "record_count": 2,
+      "byte_size": 587,
+      "sha256": "61a6a3ea45bea625b6ba01c7cabd1d723a6b70d786ca6fa8d3e0dd80efd91c30"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+financial-data-lake/.lake_data/
+financial-feature-store/data/exports/
+financial-feature-store/data/offline/
+financial-feature-store/data/online/
+financial-feature-store/data/registry/

@@ -1,0 +1,13 @@
+{
+  "observations": [
+    {
+      "entity": "Northland",
+      "event_at": "2025-01-01T00:00:00Z",
+      "published_at": "2025-02-03T09:00:00Z",
+      "series": "LABOR",
+      "value": "102.4",
+      "unit": "index_points",
+      "revision": 2
+    }
+  ]
+}

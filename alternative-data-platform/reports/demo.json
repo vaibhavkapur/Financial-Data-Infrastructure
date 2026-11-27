@@ -1,0 +1,222 @@
+{
+  "first_cut": {
+    "schema_version": 1,
+    "as_of": "2025-02-01T09:45:00.000000Z",
+    "exported_at": "2025-02-03T10:00:00.000000Z",
+    "purpose": "demo",
+    "history": false,
+    "current_registry_version": 1,
+    "licenses": [
+      {
+        "source": "macro",
+        "registry_version": 1,
+        "license_id": "fixture-macro-v1",
+        "terms": "Synthetic fixture. Internal research and demonstration only. No redistribution.",
+        "export_purposes": [
+          "research",
+          "demo"
+        ],
+        "valid_until": "2099-01-01T00:00:00Z",
+        "provenance": "Generated for this repository. Fictional Northland labor index."
+      },
+      {
+        "source": "news",
+        "registry_version": 1,
+        "license_id": "fixture-news-v1",
+        "terms": "Synthetic fixture. Internal demonstration only. No redistribution.",
+        "export_purposes": [
+          "demo"
+        ],
+        "valid_until": "2099-01-01T00:00:00Z",
+        "provenance": "Original fictional headlines written for this repository."
+      }
+    ],
+    "records": [
+      {
+        "embargo_until": "2025-02-01T09:00:00.000000Z",
+        "entity_id": "country-NL-fixture",
+        "event_at": "2024-12-01T00:00:00.000000Z",
+        "missing_reason": "survey unavailable",
+        "published_at": "2025-02-01T09:00:00.000000Z",
+        "revision": 1,
+        "series": "LABOR",
+        "unit": "index_points",
+        "value": null,
+        "source": "macro",
+        "record_key": "[\"LABOR\",\"country-NL-fixture\",\"2024-12-01T00:00:00.000000Z\"]",
+        "available_at": "2025-02-01T09:45:00.000000Z",
+        "observed_at": "2025-02-01T09:45:00.000000Z",
+        "raw_sha256": "2f8bb78ea3cdca21ebdce97d6fe59e0f5031d9030d6b0b73e6c497290e31acf4",
+        "sequence": 1,
+        "ordinal": 2,
+        "registry_version": 1,
+        "license_id": "fixture-macro-v1"
+      },
+      {
+        "embargo_until": "2025-02-01T09:00:00.000000Z",
+        "entity_id": "country-NL-fixture",
+        "event_at": "2025-01-01T00:00:00.000000Z",
+        "missing_reason": null,
+        "published_at": "2025-02-01T09:00:00.000000Z",
+        "revision": 1,
+        "series": "LABOR",
+        "unit": "index_points",
+        "value": "101.2",
+        "source": "macro",
+        "record_key": "[\"LABOR\",\"country-NL-fixture\",\"2025-01-01T00:00:00.000000Z\"]",
+        "available_at": "2025-02-01T09:45:00.000000Z",
+        "observed_at": "2025-02-01T09:45:00.000000Z",
+        "raw_sha256": "2f8bb78ea3cdca21ebdce97d6fe59e0f5031d9030d6b0b73e6c497290e31acf4",
+        "sequence": 1,
+        "ordinal": 1,
+        "registry_version": 1,
+        "license_id": "fixture-macro-v1"
+      }
+    ]
+  },
+  "final_history": {
+    "schema_version": 1,
+    "as_of": "2025-02-03T10:00:00.000000Z",
+    "exported_at": "2025-02-03T10:00:00.000000Z",
+    "purpose": "demo",
+    "history": true,
+    "current_registry_version": 1,
+    "licenses": [
+      {
+        "source": "macro",
+        "registry_version": 1,
+        "license_id": "fixture-macro-v1",
+        "terms": "Synthetic fixture. Internal research and demonstration only. No redistribution.",
+        "export_purposes": [
+          "research",
+          "demo"
+        ],
+        "valid_until": "2099-01-01T00:00:00Z",
+        "provenance": "Generated for this repository. Fictional Northland labor index."
+      },
+      {
+        "source": "news",
+        "registry_version": 1,
+        "license_id": "fixture-news-v1",
+        "terms": "Synthetic fixture. Internal demonstration only. No redistribution.",
+        "export_purposes": [
+          "demo"
+        ],
+        "valid_until": "2099-01-01T00:00:00Z",
+        "provenance": "Original fictional headlines written for this repository."
+      }
+    ],
+    "records": [
+      {
+        "embargo_until": "2025-02-01T09:00:00.000000Z",
+        "entity_id": "country-NL-fixture",
+        "event_at": "2024-12-01T00:00:00.000000Z",
+        "missing_reason": "survey unavailable",
+        "published_at": "2025-02-01T09:00:00.000000Z",
+        "revision": 1,
+        "series": "LABOR",
+        "unit": "index_points",
+        "value": null,
+        "source": "macro",
+        "record_key": "[\"LABOR\",\"country-NL-fixture\",\"2024-12-01T00:00:00.000000Z\"]",
+        "available_at": "2025-02-01T09:45:00.000000Z",
+        "observed_at": "2025-02-01T09:45:00.000000Z",
+        "raw_sha256": "2f8bb78ea3cdca21ebdce97d6fe59e0f5031d9030d6b0b73e6c497290e31acf4",
+        "sequence": 1,
+        "ordinal": 2,
+        "registry_version": 1,
+        "license_id": "fixture-macro-v1"
+      },
+      {
+        "embargo_until": "2025-02-03T09:00:00.000000Z",
+        "entity_id": "country-NL-fixture",
+        "event_at": "2025-01-01T00:00:00.000000Z",
+        "missing_reason": null,
+        "published_at": "2025-02-03T09:00:00.000000Z",
+        "revision": 2,
+        "series": "LABOR",
+        "unit": "index_points",
+        "value": "102.4",
+        "source": "macro",
+        "record_key": "[\"LABOR\",\"country-NL-fixture\",\"2025-01-01T00:00:00.000000Z\"]",
+        "available_at": "2025-02-03T10:00:00.000000Z",
+        "observed_at": "2025-02-03T10:00:00.000000Z",
+        "raw_sha256": "d50eacc1603a212a149cbe2a9b33ed2e7b85fa6c38a70079f7ecf079fc137481",
+        "sequence": 2,
+        "ordinal": 1,
+        "registry_version": 1,
+        "license_id": "fixture-macro-v1"
+      },
+      {
+        "embargo_until": "2025-02-01T09:00:00.000000Z",
+        "entity_id": "country-NL-fixture",
+        "event_at": "2025-01-01T00:00:00.000000Z",
+        "missing_reason": null,
+        "published_at": "2025-02-01T09:00:00.000000Z",
+        "revision": 1,
+        "series": "LABOR",
+        "unit": "index_points",
+        "value": "101.2",
+        "source": "macro",
+        "record_key": "[\"LABOR\",\"country-NL-fixture\",\"2025-01-01T00:00:00.000000Z\"]",
+        "available_at": "2025-02-01T09:45:00.000000Z",
+        "observed_at": "2025-02-01T09:45:00.000000Z",
+        "raw_sha256": "2f8bb78ea3cdca21ebdce97d6fe59e0f5031d9030d6b0b73e6c497290e31acf4",
+        "sequence": 1,
+        "ordinal": 1,
+        "registry_version": 1,
+        "license_id": "fixture-macro-v1"
+      },
+      {
+        "article_id": "bulletin-001",
+        "embargo_until": "2025-02-01T10:00:00.000000Z",
+        "entity_id": "company-aster",
+        "event_at": "2025-02-01T09:00:00.000000Z",
+        "headline": "Aster Labs opens a fictional research facility",
+        "published_at": "2025-02-01T09:30:00.000000Z",
+        "revision": 1,
+        "source": "news",
+        "record_key": "bulletin-001",
+        "available_at": "2025-02-01T10:00:00.000000Z",
+        "observed_at": "2025-02-01T09:45:00.000000Z",
+        "raw_sha256": "5d3c92161022b048c204d1bf3cefb4218513bc753e6632199bf0c62fd3644556",
+        "sequence": 1,
+        "ordinal": 1,
+        "registry_version": 1,
+        "license_id": "fixture-news-v1"
+      }
+    ]
+  },
+  "health": [
+    {
+      "source": "macro",
+      "cursor": 2,
+      "high_water": 2,
+      "last_success": "2025-02-03T10:00:00.000000Z",
+      "last_error": null,
+      "entitled": true,
+      "pending_pages": 0,
+      "next_sequence": null,
+      "events": {},
+      "quality": {},
+      "records": 3
+    },
+    {
+      "source": "news",
+      "cursor": 2,
+      "high_water": 2,
+      "last_success": "2025-02-03T10:00:00.000000Z",
+      "last_error": null,
+      "entitled": true,
+      "pending_pages": 0,
+      "next_sequence": null,
+      "events": {
+        "duplicate": 1
+      },
+      "quality": {
+        "ambiguous_entity": 1
+      },
+      "records": 1
+    }
+  ]
+}

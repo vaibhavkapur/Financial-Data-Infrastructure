@@ -1,0 +1,3 @@
+{"seq_id": "CH-20240604-1001", "symbol": "NVDA", "ts_event_ns": 1717507801000000000, "ts_ingest_ns": 1717507801150000000, "px": 1150.25, "qty": 40.0, "ccy": "USD", "venue_code": "XNAS", "aggressor_side": "B"}
+{"seq_id": "CH-20240604-1002", "symbol": "NVDA", "ts_event_ns": 1717507805000000000, "ts_ingest_ns": 1717507805200000000, "px": 1150.75, "qty": 65.0, "ccy": "USD", "venue_code": "XNAS", "aggressor_side": "S"}
+{"seq_id": "CH-20240604-1002", "symbol": "NVDA", "ts_event_ns": 1717507805000000000, "ts_ingest_ns": 1717507805200000000, "px": 1150.75, "qty": 65.0, "ccy": "USD", "venue_code": "XNAS", "aggressor_side": "S"}
