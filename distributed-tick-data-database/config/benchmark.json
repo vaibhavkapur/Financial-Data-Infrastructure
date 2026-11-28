@@ -1,0 +1,39 @@
+{
+  "config_version": "1.0.0",
+  "node_id": "bench-local-01",
+  "topology": "single-node-multi-shard",
+  "data_dir": "./data/bench_runtime",
+  "num_shards": 4,
+  "partition_granularity": "hour",
+  "wal": {
+    "sync_mode": "fsync_per_batch",
+    "max_segment_bytes": 67108864,
+    "truncate_corrupt_tail_on_recovery": true
+  },
+  "storage": {
+    "memtable_max_events": 32768,
+    "compression": "delta_dict_gzip",
+    "enable_checksums": true
+  },
+  "ingest": {
+    "max_batch_size": 10000,
+    "queue_capacity_batches": 128,
+    "backpressure_timeout_ms": 500,
+    "late_event_policy": "accept_and_flag",
+    "late_event_max_watermark_lag_ms": 3600000
+  },
+  "query": {
+    "max_range_duration_hours": 24,
+    "max_limit_rows": 200000,
+    "max_scan_partitions": 128,
+    "default_limit_rows": 10000,
+    "timeout_ms": 10000
+  },
+  "generator": {
+    "seed": 20261128,
+    "instruments": ["AAPL", "MSFT", "NVDA", "SPY", "QQQ", "ESZ6", "BTC-USD", "ETH-USD"],
+    "source_id": "sim-bench-feed",
+    "feed_session_id": "2026-11-28-bench-01",
+    "start_time_ns": 1764320400000000000
+  }
+}

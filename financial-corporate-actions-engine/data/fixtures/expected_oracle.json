@@ -1,0 +1,176 @@
+{
+  "oracle_version": "1.0.0",
+  "methodology": "Hand-calculated exact Decimal CRSP/S&P backward adjustment convention",
+  "scenarios": {
+    "acme_pit_before_correction": {
+      "security_id": "SEC-ACME",
+      "account_id": "ACCT-SIM-001",
+      "as_of_time": "2025-01-13T22:00:00Z",
+      "end_date": "2025-01-13",
+      "expected_effective_action_ids": [
+        "CA-ACME-SPLIT-01@v1",
+        "CA-ACME-SDIV-01@v1",
+        "CA-ACME-SYM-01@v1",
+        "CA-ACME-DIV-01@v1"
+      ],
+      "expected_factors_by_date": {
+        "2025-01-02": {
+          "split_price_factor": "0.25",
+          "dividend_factor": "0.882",
+          "total_return_factor": "0.2205",
+          "split_adj_close": "50.000000",
+          "tr_adj_close": "44.100000",
+          "active_symbol": "ACME"
+        },
+        "2025-01-08": {
+          "split_price_factor": "1",
+          "dividend_factor": "0.98",
+          "total_return_factor": "0.98",
+          "split_adj_close": "45.000000",
+          "tr_adj_close": "44.100000",
+          "active_symbol": "ACME"
+        },
+        "2025-01-13": {
+          "split_price_factor": "1",
+          "dividend_factor": "1",
+          "total_return_factor": "1",
+          "split_adj_close": "43.200000",
+          "tr_adj_close": "43.200000",
+          "active_symbol": "ACMX"
+        }
+      },
+      "expected_end_position": {
+        "quantity": "400.000000",
+        "cost_basis_per_share": "40.000000",
+        "settled_cash_balance": "3000.00",
+        "pending_receivable_cash": "360.00",
+        "cumulative_net_dividends": "2360.00",
+        "active_symbol": "ACMX"
+      }
+    },
+    "acme_pit_after_correction": {
+      "security_id": "SEC-ACME",
+      "account_id": "ACCT-SIM-001",
+      "as_of_time": "2025-01-15T22:00:00Z",
+      "end_date": "2025-01-15",
+      "expected_effective_action_ids": [
+        "CA-ACME-SPLIT-01@v1",
+        "CA-ACME-SDIV-01@v1",
+        "CA-ACME-SYM-01@v1",
+        "CA-ACME-DIV-01@v2"
+      ],
+      "expected_factors_by_date": {
+        "2025-01-02": {
+          "split_price_factor": "0.25",
+          "dividend_factor": "0.864",
+          "total_return_factor": "0.216",
+          "split_adj_close": "50.000000",
+          "tr_adj_close": "43.200000",
+          "active_symbol": "ACME"
+        },
+        "2025-01-06": {
+          "split_price_factor": "1",
+          "dividend_factor": "0.864",
+          "total_return_factor": "0.864",
+          "split_adj_close": "50.000000",
+          "tr_adj_close": "43.200000",
+          "active_symbol": "ACME"
+        },
+        "2025-01-10": {
+          "split_price_factor": "1",
+          "dividend_factor": "0.96",
+          "total_return_factor": "0.96",
+          "split_adj_close": "45.000000",
+          "tr_adj_close": "43.200000",
+          "active_symbol": "ACMX"
+        },
+        "2025-01-15": {
+          "split_price_factor": "1",
+          "dividend_factor": "1",
+          "total_return_factor": "1",
+          "split_adj_close": "43.200000",
+          "tr_adj_close": "43.200000",
+          "active_symbol": "ACMX"
+        }
+      },
+      "expected_end_position": {
+        "quantity": "400.000000",
+        "cost_basis_per_share": "40.000000",
+        "settled_cash_balance": "3720.00",
+        "pending_receivable_cash": "0.00",
+        "cumulative_net_dividends": "2720.00",
+        "active_symbol": "ACMX"
+      },
+      "expected_reconciliation": {
+        "tr_series_return": "0.0000000000",
+        "portfolio_gross_return": "0.0000000000",
+        "reconciled": true
+      }
+    },
+    "euro_same_day_split_fx_div_and_merger": {
+      "security_id": "SEC-EURO",
+      "account_id": "ACCT-SIM-001",
+      "as_of_time": "2025-01-10T22:00:00Z",
+      "end_date": "2025-01-10",
+      "expected_quarantined_action_ids": [
+        "CA-EURO-MRG-01"
+      ],
+      "expected_factors_by_date": {
+        "2025-01-02": {
+          "split_price_factor": "0.5",
+          "dividend_factor": "0.956",
+          "total_return_factor": "0.478",
+          "split_adj_close": "50.000000",
+          "tr_adj_close": "47.800000",
+          "active_symbol": "EURO"
+        },
+        "2025-01-06": {
+          "split_price_factor": "1",
+          "dividend_factor": "1",
+          "total_return_factor": "1",
+          "split_adj_close": "47.800000",
+          "tr_adj_close": "47.800000",
+          "active_symbol": "EURO"
+        }
+      },
+      "expected_end_position": {
+        "quantity": "100.000000",
+        "cost_basis_per_share": "50.000000",
+        "settled_cash_balance": "687.00",
+        "pending_receivable_cash": "0.00",
+        "cumulative_gross_dividends": "220.00",
+        "cumulative_net_dividends": "187.00"
+      }
+    },
+    "rev_reverse_split_and_cancelled_div": {
+      "security_id": "SEC-REV",
+      "account_id": "ACCT-SIM-001",
+      "as_of_time": "2025-01-08T22:00:00Z",
+      "end_date": "2025-01-08",
+      "expected_factors_by_date": {
+        "2025-01-02": {
+          "split_price_factor": "5",
+          "split_volume_factor": "0.2",
+          "dividend_factor": "1",
+          "total_return_factor": "5",
+          "split_adj_close": "20.000000",
+          "tr_adj_close": "20.000000"
+        },
+        "2025-01-06": {
+          "split_price_factor": "1",
+          "dividend_factor": "1",
+          "total_return_factor": "1",
+          "split_adj_close": "20.000000",
+          "tr_adj_close": "20.000000"
+        }
+      },
+      "expected_end_position": {
+        "quantity": "100.000000",
+        "cost_basis_per_share": "20.000000",
+        "settled_cash_balance": "0.00",
+        "pending_receivable_cash": "0.00",
+        "cumulative_net_dividends": "0.00"
+      }
+    }
+  }
+}

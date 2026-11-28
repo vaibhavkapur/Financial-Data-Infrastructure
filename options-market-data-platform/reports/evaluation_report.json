@@ -1,0 +1,110 @@
+{
+  "comparisons": [
+    {
+      "abs_iv_error": 5.753838627775565e-09,
+      "abs_tte_error": 0.0,
+      "computed_iv": 0.20000000575383864,
+      "computed_tte_years": 1.0,
+      "expected_iv": 0.2,
+      "expected_tte_years": 1.0,
+      "feature_id": "a2a0921d99e82fb13479d634b83bd123d0de7c81475d347ece5a7e8d40314efc",
+      "iv_status": "COMPUTED",
+      "option_id": "OPT:SYNTH:20270619:C:100.0000",
+      "passed": true,
+      "price_residual": 5.329070518200751e-15,
+      "solver_iterations": 3
+    },
+    {
+      "abs_iv_error": 9.099042963534032e-09,
+      "abs_tte_error": 0.0,
+      "computed_iv": 0.21999999090095704,
+      "computed_tte_years": 1.0,
+      "expected_iv": 0.22,
+      "expected_tte_years": 1.0,
+      "feature_id": "4bde231f38e89712ed9bd61b32bdcf492ab81e13c3b4049fa198b3affa4a77da",
+      "iv_status": "COMPUTED",
+      "option_id": "OPT:SYNTH:20270619:C:110.0000",
+      "passed": true,
+      "price_residual": 1.7763568394002505e-15,
+      "solver_iterations": 3
+    },
+    {
+      "abs_iv_error": 6.451086775882686e-09,
+      "abs_tte_error": 0.0,
+      "computed_iv": 0.2500000064510868,
+      "computed_tte_years": 1.0,
+      "expected_iv": 0.25,
+      "expected_tte_years": 1.0,
+      "feature_id": "f42ec86281523b419125f5afec3d4bffa72dfcbc7a6709ebab61c448b1236494",
+      "iv_status": "COMPUTED",
+      "option_id": "OPT:SYNTH:20270619:C:90.0000",
+      "passed": true,
+      "price_residual": 3.552713678800501e-15,
+      "solver_iterations": 4
+    },
+    {
+      "abs_iv_error": 3.763478417795341e-09,
+      "abs_tte_error": 0.0,
+      "computed_iv": 0.20000000376347843,
+      "computed_tte_years": 1.0,
+      "expected_iv": 0.2,
+      "expected_tte_years": 1.0,
+      "feature_id": "6a8653dc59ea1cb0e0938473be10059165d2ba283d6996bcbb4300980be0f3f7",
+      "iv_status": "COMPUTED",
+      "option_id": "OPT:SYNTH:20270619:P:100.0000",
+      "passed": true,
+      "price_residual": 7.105427357601002e-15,
+      "solver_iterations": 3
+    },
+    {
+      "abs_iv_error": 8.286198310836212e-09,
+      "abs_tte_error": 0.0,
+      "computed_iv": 0.2200000082861983,
+      "computed_tte_years": 1.0,
+      "expected_iv": 0.22,
+      "expected_tte_years": 1.0,
+      "feature_id": "1e1cd5b7ab46fd9eb811b41269f5cc21649aa0e49a791a9377910fadb93ee81c",
+      "iv_status": "COMPUTED",
+      "option_id": "OPT:SYNTH:20270619:P:110.0000",
+      "passed": true,
+      "price_residual": 1.5987211554602254e-14,
+      "solver_iterations": 4
+    },
+    {
+      "abs_iv_error": 1.1970833768693012e-08,
+      "abs_tte_error": 0.0,
+      "computed_iv": 0.25000001197083377,
+      "computed_tte_years": 1.0,
+      "expected_iv": 0.25,
+      "expected_tte_years": 1.0,
+      "feature_id": "9266c87379f431018e4f45cb59c9fa45a0389ef541b3431ee2d2d1a0e7eb28e2",
+      "iv_status": "COMPUTED",
+      "option_id": "OPT:SYNTH:20270619:P:90.0000",
+      "passed": true,
+      "price_residual": 1.7467360891032513e-11,
+      "solver_iterations": 2
+    }
+  ],
+  "config_hash": "7dfe44232711a30721a02586bbf43488f48c5b696cc05d0e8b87b3eda0d0e721",
+  "config_version": "1.0.0",
+  "fixture": "reference_chain_v1",
+  "generated_at_utc": "2026-11-28T04:59:46Z",
+  "runtime": {
+    "machine": "arm64",
+    "python_version": "3.9.6",
+    "system": "Darwin"
+  },
+  "summary": {
+    "all_passed": true,
+    "contracts_evaluated": 6,
+    "max_abs_iv_error": 1.1970833768693012e-08,
+    "max_abs_tte_error": 0.0,
+    "max_price_residual": 1.7467360891032513e-11,
+    "replay_identical": true,
+    "snapshot_hash": "b1a6d274985a9e1a4dbd1ada3e0a04b1bd029336f0d7e5d301f5bfa82e12994a"
+  },
+  "tolerances": {
+    "iv_tolerance": 1e-06,
+    "tte_tolerance": 1e-09
+  }
+}

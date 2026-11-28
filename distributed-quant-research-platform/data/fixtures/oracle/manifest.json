@@ -1,0 +1,26 @@
+{
+  "created_at": "2025-01-10T00:00:00Z",
+  "dataset_id": "synthetic-oracle-bars",
+  "expected_row_count": 6,
+  "format": "jsonl",
+  "manifest_sha256": "0231aa7eedfcd3d661e5d94d91e130f752a5f399d37a4b671e6d54120cd7a480",
+  "partitions": [
+    {
+      "content_sha256": "7f9cbdd6ab4b60156833cbeb273f22dd9d7b687011585fd7267f89a75e19b156",
+      "max_availability_time": "2025-01-07T21:00:30Z",
+      "max_event_time": "2025-01-07T21:00:00Z",
+      "min_event_time": "2025-01-02T21:00:00Z",
+      "partition_id": "part-000",
+      "relative_path": "oracle_bars.jsonl",
+      "row_count": 6,
+      "size_bytes": 1465
+    }
+  ],
+  "schema_version": "dqrp.v1",
+  "source_lineage": "scripts/generate_fixtures.py:generate_oracle_fixture",
+  "source_name": "synthetic-oracle-generator",
+  "symbols": [
+    "ORACLE"
+  ],
+  "version": "1.0.0"
+}

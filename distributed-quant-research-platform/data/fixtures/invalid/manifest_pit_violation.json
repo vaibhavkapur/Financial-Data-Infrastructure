@@ -1,0 +1,25 @@
+{
+  "schema_version": "dqrp.v1",
+  "dataset_id": "bad-pit",
+  "version": "1.0.0",
+  "format": "jsonl",
+  "source_name": "synthetic",
+  "source_lineage": "invalid-fixture",
+  "created_at": "2025-01-03T00:00:00Z",
+  "expected_row_count": 1,
+  "symbols": [
+    "BAD"
+  ],
+  "partitions": [
+    {
+      "partition_id": "part-000",
+      "relative_path": "pit_violation_bars.jsonl",
+      "row_count": 1,
+      "content_sha256": "7881aea40b241757215b7b52a582e9887dc1b6bfb7e423c27f4133b012562e81",
+      "min_event_time": "2025-01-02T21:00:00Z",
+      "max_event_time": "2025-01-02T21:00:00Z",
+      "max_availability_time": "2025-01-02T21:00:00Z",
+      "size_bytes": 238
+    }
+  ]
+}

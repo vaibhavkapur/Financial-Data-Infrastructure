@@ -1,0 +1,45 @@
+name: Options Market Data Platform CI
+
+on:
+  push:
+    paths:
+      - "options-market-data-platform/**"
+      - ".github/workflows/options-market-data-platform.yml"
+  pull_request:
+    paths:
+      - "options-market-data-platform/**"
+      - ".github/workflows/options-market-data-platform.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11", "3.12"]
+    defaults:
+      run:
+        working-directory: options-market-data-platform
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Run unit, integration, consistency, HTTP, and CLI tests
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Run analytical Black-Scholes oracle evaluation
+        run: python3 scripts/run_evaluation.py
+
+      - name: Run reproducible end-to-end demo
+        run: python3 scripts/run_demo.py
+
+      - name: Run deterministic synthetic benchmark
+        run: python3 scripts/run_benchmark.py

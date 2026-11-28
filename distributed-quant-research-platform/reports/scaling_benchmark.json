@@ -1,0 +1,126 @@
+{
+  "all_parity_matched": true,
+  "cost_model": {
+    "artifact_gb_write_usd": 0.02,
+    "cpu_core_hour_usd": 0.048,
+    "memory_gb_hour_usd": 0.006,
+    "model_label": "synthetic-cpu-worker-v1"
+  },
+  "cost_projections": [
+    {
+      "note": "Synthetic linear projection from measured benchmark per-trial averages; actual cloud billing varies.",
+      "projected_cpu_seconds": 3.4596,
+      "projected_estimated_cost_usd": 5.111e-05,
+      "trial_count": 24
+    },
+    {
+      "note": "Synthetic linear projection from measured benchmark per-trial averages; actual cloud billing varies.",
+      "projected_cpu_seconds": 14.4148,
+      "projected_estimated_cost_usd": 0.00021297,
+      "trial_count": 100
+    },
+    {
+      "note": "Synthetic linear projection from measured benchmark per-trial averages; actual cloud billing varies.",
+      "projected_cpu_seconds": 144.1482,
+      "projected_estimated_cost_usd": 0.00212968,
+      "trial_count": 1000
+    },
+    {
+      "note": "Synthetic linear projection from measured benchmark per-trial averages; actual cloud billing varies.",
+      "projected_cpu_seconds": 1441.4821,
+      "projected_estimated_cost_usd": 0.02129683,
+      "trial_count": 10000
+    }
+  ],
+  "dataset_sha256": "f000552a6f419e1d020e8133a3fd50c5385e046a7564c38fd3fc83aaf123d889",
+  "environment": {
+    "cpu_count": 10,
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "machine": "arm64",
+    "optional_packages": {
+      "dask": null,
+      "distributed": null,
+      "numpy": null,
+      "psycopg": null,
+      "pyarrow": null,
+      "pytest": null,
+      "ray": null
+    },
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_implementation": "CPython",
+    "python_version": "3.9.6"
+  },
+  "experiment_id": "exp-scaling-benchmark",
+  "experiment_sha256": "cbd4a237b97caee84655245f9f6eaec965c999c60cafdee7748465264fe34f02",
+  "measurement_type": "observed_local_hardware_benchmark_on_synthetic_fixture",
+  "runs": [
+    {
+      "aggregate_sha256": "7a9e8a0a1543c73916e4908453ef8013719747d15b1185643b3d406438c20267",
+      "backend": "local",
+      "cpu_seconds": 2.990147,
+      "duplicate_completed_trials": 0,
+      "estimated_cost_usd": 4.48373e-05,
+      "parallel_efficiency": 1.0,
+      "parity_with_local_baseline": true,
+      "peak_memory_mb": 17.9219,
+      "run_id": "bench-local-1w",
+      "speedup_vs_local_1w": 1.0,
+      "status": "COMPLETED",
+      "succeeded_trials": 24,
+      "total_trials": 24,
+      "wall_seconds": 3.094637,
+      "workers": 1
+    },
+    {
+      "aggregate_sha256": "7a9e8a0a1543c73916e4908453ef8013719747d15b1185643b3d406438c20267",
+      "backend": "distributed",
+      "cpu_seconds": 3.072075,
+      "duplicate_completed_trials": 0,
+      "estimated_cost_usd": 4.59349e-05,
+      "parallel_efficiency": 0.9771,
+      "parity_with_local_baseline": true,
+      "peak_memory_mb": 18.2812,
+      "run_id": "bench-dist-1w",
+      "speedup_vs_local_1w": 0.9771,
+      "status": "COMPLETED",
+      "succeeded_trials": 24,
+      "total_trials": 24,
+      "wall_seconds": 3.167098,
+      "workers": 1
+    },
+    {
+      "aggregate_sha256": "7a9e8a0a1543c73916e4908453ef8013719747d15b1185643b3d406438c20267",
+      "backend": "distributed",
+      "cpu_seconds": 3.073664,
+      "duplicate_completed_trials": 0,
+      "estimated_cost_usd": 4.59552e-05,
+      "parallel_efficiency": 0.9303,
+      "parity_with_local_baseline": true,
+      "peak_memory_mb": 18.25,
+      "run_id": "bench-dist-2w",
+      "speedup_vs_local_1w": 1.8605,
+      "status": "COMPLETED",
+      "succeeded_trials": 24,
+      "total_trials": 24,
+      "wall_seconds": 1.663353,
+      "workers": 2
+    },
+    {
+      "aggregate_sha256": "7a9e8a0a1543c73916e4908453ef8013719747d15b1185643b3d406438c20267",
+      "backend": "distributed",
+      "cpu_seconds": 3.459557,
+      "duplicate_completed_trials": 0,
+      "estimated_cost_usd": 5.11124e-05,
+      "parallel_efficiency": 0.7681,
+      "parity_with_local_baseline": true,
+      "peak_memory_mb": 18.2812,
+      "run_id": "bench-dist-4w",
+      "speedup_vs_local_1w": 3.0726,
+      "status": "COMPLETED",
+      "succeeded_trials": 24,
+      "total_trials": 24,
+      "wall_seconds": 1.007185,
+      "workers": 4
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+name: Distributed Quant Research Platform CI
+
+on:
+  push:
+    paths:
+      - "distributed-quant-research-platform/**"
+      - ".github/workflows/distributed-quant-research-platform.yml"
+  pull_request:
+    paths:
+      - "distributed-quant-research-platform/**"
+      - ".github/workflows/distributed-quant-research-platform.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11", "3.12"]
+    defaults:
+      run:
+        working-directory: distributed-quant-research-platform
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Verify fixture generation determinism
+        run: python3 scripts/generate_fixtures.py
+
+      - name: Validate canonical manifest and experiment specs
+        run: |
+          PYTHONPATH=src python3 -m dqrp validate-manifest data/fixtures/oracle/manifest.json
+          PYTHONPATH=src python3 -m dqrp validate-manifest data/fixtures/equities_synthetic_v1/manifest.json
+          PYTHONPATH=src python3 -m dqrp validate-spec config/oracle_experiment.json
+          PYTHONPATH=src python3 -m dqrp validate-spec config/demo_experiment.json
+
+      - name: Run unit, integration, failure, and parity test suite
+        run: PYTHONPATH=src python3 -m unittest discover -s tests -v
+
+      - name: Run reproducible end-to-end demo and verify local/distributed parity
+        run: python3 scripts/run_demo.py
+
+      - name: Run scaling benchmark smoke check
+        run: python3 scripts/run_benchmarks.py

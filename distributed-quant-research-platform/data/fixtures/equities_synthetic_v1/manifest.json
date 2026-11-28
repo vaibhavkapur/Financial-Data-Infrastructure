@@ -1,0 +1,37 @@
+{
+  "created_at": "2025-01-10T00:00:00Z",
+  "dataset_id": "synthetic-equities-daily",
+  "expected_row_count": 504,
+  "format": "jsonl",
+  "manifest_sha256": "f000552a6f419e1d020e8133a3fd50c5385e046a7564c38fd3fc83aaf123d889",
+  "partitions": [
+    {
+      "content_sha256": "6a19b64b2f6ff168507bfcc5f29fcde949b8af2ce0fee951265a61b1def886d1",
+      "max_availability_time": "2024-09-09T21:00:15Z",
+      "max_event_time": "2024-09-09T21:00:00Z",
+      "min_event_time": "2024-01-02T21:00:00Z",
+      "partition_id": "part-000",
+      "relative_path": "part-000-sym_a.jsonl",
+      "row_count": 252,
+      "size_bytes": 63819
+    },
+    {
+      "content_sha256": "19b66e222b4a6480a3e1f7268853b42bd64f63821c5fa0f19a2e5961e3abf023",
+      "max_availability_time": "2024-09-09T21:00:45Z",
+      "max_event_time": "2024-09-09T21:00:00Z",
+      "min_event_time": "2024-01-02T21:00:00Z",
+      "partition_id": "part-001",
+      "relative_path": "part-001-sym_b.jsonl",
+      "row_count": 252,
+      "size_bytes": 62837
+    }
+  ],
+  "schema_version": "dqrp.v1",
+  "source_lineage": "scripts/generate_fixtures.py:generate_multi_symbol_dataset:seed=20250101",
+  "source_name": "synthetic-gbm-v1",
+  "symbols": [
+    "SYM_A",
+    "SYM_B"
+  ],
+  "version": "1.0.0"
+}

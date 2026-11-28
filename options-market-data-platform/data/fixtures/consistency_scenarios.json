@@ -1,0 +1,91 @@
+{
+  "bundle_name": "consistency_scenarios_v1",
+  "schema_version": "1.0.0",
+  "provenance_note": "Synthetic negative fixtures for verifying chain snapshot consistency enforcement.",
+  "scenarios": {
+    "mixed_underlying": {
+      "snapshot_id": "BAD-MIXED-001",
+      "underlying_symbol": "SYNTH",
+      "snapshot_time": "2026-06-19T20:00:00Z",
+      "ingestion_time": "2026-06-19T20:00:02Z",
+      "source_id": "synthetic_bad_feed",
+      "schema_version": "1.0.0",
+      "quotes": [
+        {
+          "snapshot_id": "BAD-MIXED-001",
+          "option_id": "OPT:SYNTH:20270619:C:100.0000",
+          "quote_version": 1,
+          "underlying_symbol": "SYNTH",
+          "reported_strike": "100.00",
+          "event_time": "2026-06-19T19:59:59Z",
+          "ingestion_time": "2026-06-19T20:00:01Z",
+          "bid": "9.77",
+          "ask": "9.87",
+          "bid_size": 10,
+          "ask_size": 10,
+          "source_id": "synthetic_bad_feed",
+          "source_sequence": 8001,
+          "schema_version": "1.0.0"
+        },
+        {
+          "snapshot_id": "BAD-MIXED-001",
+          "option_id": "OPT:OTHER:20270619:C:100.0000",
+          "quote_version": 1,
+          "underlying_symbol": "OTHER",
+          "reported_strike": "100.00",
+          "event_time": "2026-06-19T19:59:59Z",
+          "ingestion_time": "2026-06-19T20:00:01Z",
+          "bid": "9.77",
+          "ask": "9.87",
+          "bid_size": 10,
+          "ask_size": 10,
+          "source_id": "synthetic_bad_feed",
+          "source_sequence": 8002,
+          "schema_version": "1.0.0"
+        }
+      ]
+    },
+    "duplicate_quote_version": {
+      "snapshot_id": "BAD-DUP-001",
+      "underlying_symbol": "SYNTH",
+      "snapshot_time": "2026-06-19T20:00:00Z",
+      "ingestion_time": "2026-06-19T20:00:02Z",
+      "source_id": "synthetic_bad_feed",
+      "schema_version": "1.0.0",
+      "quotes": [
+        {
+          "snapshot_id": "BAD-DUP-001",
+          "option_id": "OPT:SYNTH:20270619:C:100.0000",
+          "quote_version": 1,
+          "underlying_symbol": "SYNTH",
+          "reported_strike": "100.00",
+          "event_time": "2026-06-19T19:59:58Z",
+          "ingestion_time": "2026-06-19T20:00:00Z",
+          "bid": "9.77",
+          "ask": "9.87",
+          "bid_size": 10,
+          "ask_size": 10,
+          "source_id": "synthetic_bad_feed",
+          "source_sequence": 8003,
+          "schema_version": "1.0.0"
+        },
+        {
+          "snapshot_id": "BAD-DUP-001",
+          "option_id": "OPT:SYNTH:20270619:C:100.0000",
+          "quote_version": 1,
+          "underlying_symbol": "SYNTH",
+          "reported_strike": "100.00",
+          "event_time": "2026-06-19T19:59:59Z",
+          "ingestion_time": "2026-06-19T20:00:01Z",
+          "bid": "9.78",
+          "ask": "9.88",
+          "bid_size": 10,
+          "ask_size": 10,
+          "source_id": "synthetic_bad_feed",
+          "source_sequence": 8004,
+          "schema_version": "1.0.0"
+        }
+      ]
+    }
+  }
+}

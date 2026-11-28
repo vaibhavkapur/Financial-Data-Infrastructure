@@ -1,0 +1,44 @@
+[
+  {
+    "account_id": "ACCT-SIM-001",
+    "security_id": "SEC-ACME",
+    "symbol": "ACME",
+    "as_of_date": "2025-01-02",
+    "quantity": "100",
+    "cost_basis_per_share": "160.00",
+    "currency": "USD",
+    "cash_balance": "1000.00",
+    "event_time": "2025-01-02T21:00:00Z",
+    "ingestion_time": "2025-01-02T21:10:00Z",
+    "source": "synthetic-custodian",
+    "schema_version": "1.0.0"
+  },
+  {
+    "account_id": "ACCT-SIM-001",
+    "security_id": "SEC-EURO",
+    "symbol": "EURO",
+    "as_of_date": "2025-01-02",
+    "quantity": "50",
+    "cost_basis_per_share": "100.00",
+    "currency": "USD",
+    "cash_balance": "500.00",
+    "event_time": "2025-01-02T21:00:00Z",
+    "ingestion_time": "2025-01-02T21:10:00Z",
+    "source": "synthetic-custodian",
+    "schema_version": "1.0.0"
+  },
+  {
+    "account_id": "ACCT-SIM-001",
+    "security_id": "SEC-REV",
+    "symbol": "REVS",
+    "as_of_date": "2025-01-02",
+    "quantity": "500",
+    "cost_basis_per_share": "4.00",
+    "currency": "USD",
+    "cash_balance": "0.00",
+    "event_time": "2025-01-02T21:00:00Z",
+    "ingestion_time": "2025-01-02T21:10:00Z",
+    "source": "synthetic-custodian",
+    "schema_version": "1.0.0"
+  }
+]

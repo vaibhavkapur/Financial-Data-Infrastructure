@@ -1,0 +1,31 @@
+{
+  "data_provenance": "synthetic_generated_benchmark_universe",
+  "measured_observations": {
+    "lookup_latency_ms_max": 0.0708,
+    "lookup_latency_ms_median": 0.0332,
+    "lookup_latency_ms_p95": 0.0371,
+    "memory_ingest_events_per_sec": 33305.7,
+    "memory_ingest_seconds": 0.012,
+    "replay_snapshot_hash": "0966fd7e1a90a74c34987beca8d6e00583ae59c7a34d687d95ef7ba986a3c39e",
+    "sqlite_durable_ingest_events_per_sec": 501.71,
+    "sqlite_durable_ingest_seconds": 0.7973,
+    "sqlite_journal_replay_seconds": 0.0192,
+    "sqlite_replay_events_per_sec": 20802.5
+  },
+  "not_run": [
+    "PostgreSQL 16 live multi-connection concurrency benchmark (no local PostgreSQL server in offline prototype environment)",
+    "Multi-node distributed read replica failover benchmark (outside single-node prototype scope)"
+  ],
+  "report_type": "benchmark_results",
+  "runtime": {
+    "deterministic_seed": 20260101,
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.9.6"
+  },
+  "topology": "single_node_local_prototype",
+  "workload": {
+    "n_as_of_lookups": 200,
+    "n_instruments": 100,
+    "total_events": 400
+  }
+}

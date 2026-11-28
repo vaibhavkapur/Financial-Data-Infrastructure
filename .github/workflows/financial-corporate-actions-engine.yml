@@ -1,0 +1,41 @@
+name: Financial Corporate Actions Engine CI
+
+on:
+  push:
+    paths:
+      - "financial-corporate-actions-engine/**"
+      - ".github/workflows/financial-corporate-actions-engine.yml"
+  pull_request:
+    paths:
+      - "financial-corporate-actions-engine/**"
+      - ".github/workflows/financial-corporate-actions-engine.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-stdlib:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11", "3.12"]
+    defaults:
+      run:
+        working-directory: financial-corporate-actions-engine
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run full validation suite (stdlib zero-dependency baseline)
+        run: bash scripts/validate.sh
+      - name: Verify generated reports exist and are valid JSON
+        run: |
+          python3 -c "
+          import json
+          for p in ['reports/demo_output.json', 'reports/reconciliation_report.json', 'reports/benchmark_results.json']:
+              data = json.load(open(p))
+              print('Validated', p, 'keys=', list(data.keys()))
+          "

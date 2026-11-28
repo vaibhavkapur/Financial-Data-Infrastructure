@@ -1,0 +1,128 @@
+{
+  "fixture_id": "boundary_and_invalid_v1",
+  "description": "Invalid and boundary cases verifying strict contract validation, identifier licensing, and unsupported entity rejection.",
+  "cases": [
+    {
+      "case_id": "invalid_isin_check_digit",
+      "expected_error_code": "VALIDATION_ERROR",
+      "event": {
+        "event_type": "IDENTIFIER_MAP",
+        "schema_version": "1.0.0",
+        "source_system": "VENDOR_ALPHA",
+        "source_event_id": "BAD-ISIN-1",
+        "valid_from": "2024-01-01T00:00:00Z",
+        "valid_to": null,
+        "observed_at": "2024-01-01T01:00:00Z",
+        "payload": {
+          "instrument_id": "SEC-E19954A68605",
+          "listing_id": null,
+          "namespace": "ISIN",
+          "identifier_value": "US0000001019",
+          "mic": null
+        }
+      }
+    },
+    {
+      "case_id": "unlicensed_cusip_namespace",
+      "expected_error_code": "LICENSING_VIOLATION",
+      "event": {
+        "event_type": "IDENTIFIER_MAP",
+        "schema_version": "1.0.0",
+        "source_system": "VENDOR_ALPHA",
+        "source_event_id": "BAD-LIC-1",
+        "valid_from": "2024-01-01T00:00:00Z",
+        "valid_to": null,
+        "observed_at": "2024-01-01T01:00:00Z",
+        "payload": {
+          "instrument_id": "SEC-E19954A68605",
+          "listing_id": null,
+          "namespace": "CUSIP",
+          "identifier_value": "000000101",
+          "mic": null
+        }
+      }
+    },
+    {
+      "case_id": "unsupported_asset_class",
+      "expected_error_code": "UNSUPPORTED_ENTITY",
+      "event": {
+        "event_type": "INSTRUMENT_UPSERT",
+        "schema_version": "1.0.0",
+        "source_system": "VENDOR_ALPHA",
+        "source_event_id": "BAD-AC-1",
+        "valid_from": "2024-01-01T00:00:00Z",
+        "valid_to": null,
+        "observed_at": "2024-01-01T01:00:00Z",
+        "payload": {
+          "instrument_id": "SEC-E19954A68605",
+          "name": "Unsupported Perpetual",
+          "asset_class": "CRYPTO_PERP",
+          "issuer_name": "Unknown",
+          "country_of_risk": "US",
+          "status": "ACTIVE"
+        }
+      }
+    },
+    {
+      "case_id": "inverted_valid_window",
+      "expected_error_code": "VALIDATION_ERROR",
+      "event": {
+        "event_type": "INSTRUMENT_UPSERT",
+        "schema_version": "1.0.0",
+        "source_system": "VENDOR_ALPHA",
+        "source_event_id": "BAD-WIN-1",
+        "valid_from": "2024-06-01T00:00:00Z",
+        "valid_to": "2024-01-01T00:00:00Z",
+        "observed_at": "2024-06-01T01:00:00Z",
+        "payload": {
+          "instrument_id": "SEC-E19954A68605",
+          "name": "Bad Window Corp",
+          "asset_class": "EQUITY",
+          "issuer_name": "Bad Window",
+          "country_of_risk": "US",
+          "status": "ACTIVE"
+        }
+      }
+    },
+    {
+      "case_id": "missing_timezone_offset",
+      "expected_error_code": "VALIDATION_ERROR",
+      "event": {
+        "event_type": "INSTRUMENT_UPSERT",
+        "schema_version": "1.0.0",
+        "source_system": "VENDOR_ALPHA",
+        "source_event_id": "BAD-TZ-1",
+        "valid_from": "2024-01-01T00:00:00",
+        "valid_to": null,
+        "observed_at": "2024-01-01T01:00:00Z",
+        "payload": {
+          "instrument_id": "SEC-E19954A68605",
+          "name": "Naive Timestamp Corp",
+          "asset_class": "EQUITY",
+          "issuer_name": "Naive",
+          "country_of_risk": "US",
+          "status": "ACTIVE"
+        }
+      }
+    },
+    {
+      "case_id": "unsupported_corporate_action",
+      "expected_error_code": "UNSUPPORTED_ENTITY",
+      "event": {
+        "event_type": "CORPORATE_ACTION_LINK",
+        "schema_version": "1.0.0",
+        "source_system": "CORP_ACTION_ENGINE",
+        "source_event_id": "BAD-CA-1",
+        "valid_from": "2024-07-01T00:00:00Z",
+        "valid_to": null,
+        "observed_at": "2024-07-01T01:00:00Z",
+        "payload": {
+          "action_type": "COMPLEX_TAX_REORG",
+          "from_instrument_id": "SEC-E19954A68605",
+          "to_instrument_id": "SEC-B12CCB780542",
+          "ratio": "1.0"
+        }
+      }
+    }
+  ]
+}

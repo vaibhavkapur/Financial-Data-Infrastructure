@@ -1,0 +1,74 @@
+{
+  "fixture_id": "reference_minimal_v1",
+  "description": "M1 deterministic minimal fixture for canonical instrument, listing, and identifier contracts (100% synthetic data).",
+  "schema_version": "1.0.0",
+  "events": [
+    {
+      "event_type": "INSTRUMENT_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "REF-INS-001",
+      "valid_from": "2020-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2020-01-01T08:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-E19954A68605",
+        "name": "Synthetic Acme Legacy Corp",
+        "asset_class": "EQUITY",
+        "issuer_name": "Synthetic Acme Legacy Holdings",
+        "country_of_risk": "US",
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "LISTING_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "REF-LST-001",
+      "valid_from": "2020-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2020-01-01T08:00:00Z",
+      "payload": {
+        "listing_id": "LST-19D2D62E8597",
+        "instrument_id": "SEC-E19954A68605",
+        "mic": "XNYS",
+        "ticker": "ACME",
+        "currency": "USD",
+        "is_primary": true,
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "REF-IDM-001",
+      "valid_from": "2020-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2020-01-01T08:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-E19954A68605",
+        "listing_id": null,
+        "namespace": "ISIN",
+        "identifier_value": "US0000001018",
+        "mic": null
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "REF-IDM-002",
+      "valid_from": "2020-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2020-01-01T08:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-E19954A68605",
+        "listing_id": null,
+        "namespace": "OPENFIGI",
+        "identifier_value": "BBG000SYN001",
+        "mic": null
+      }
+    }
+  ]
+}

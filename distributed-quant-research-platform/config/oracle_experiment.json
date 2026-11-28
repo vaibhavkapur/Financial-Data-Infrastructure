@@ -1,0 +1,41 @@
+{
+  "base_seed": 42,
+  "budget": {
+    "max_concurrency": 1,
+    "max_cpu_seconds": 30.0,
+    "max_estimated_cost_usd": 0.5,
+    "max_memory_mb": 1024.0,
+    "max_trials": 4,
+    "max_wall_seconds": 30.0
+  },
+  "cost_model": {
+    "artifact_gb_write_usd": 0.02,
+    "cpu_core_hour_usd": 0.048,
+    "memory_gb_hour_usd": 0.006,
+    "model_label": "synthetic-cpu-worker-v1"
+  },
+  "dataset_manifest_path": "../data/fixtures/oracle/manifest.json",
+  "description": "Deterministic single-trial reference experiment matching hand-calculated expected_oracle.json.",
+  "evaluation_as_of": null,
+  "expected_dataset_sha256": "0231aa7eedfcd3d661e5d94d91e130f752a5f399d37a4b671e6d54120cd7a480",
+  "experiment_id": "exp-oracle-sma",
+  "explicit_trials": [
+    {
+      "allow_short": false,
+      "bootstrap_draws": 0,
+      "fast_window": 2,
+      "fee_bps": 10.0,
+      "initial_capital": 10000.0,
+      "slippage_bps": 0.0,
+      "slow_window": 3,
+      "symbol": "ORACLE"
+    }
+  ],
+  "max_retries": 2,
+  "name": "Reference Oracle SMA Crossover",
+  "parameter_grid": {},
+  "retry_backoff_seconds": 0.01,
+  "schema_version": "dqrp.v1",
+  "spec_sha256": "0e6740ab582dd3300ea1ebd57f0f4e99e148f3ed7d421781dfc49ec81f3efa95",
+  "strategy_name": "sma_crossover"
+}

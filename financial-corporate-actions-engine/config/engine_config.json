@@ -1,0 +1,19 @@
+{
+  "config_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "engine_version": "1.0.0",
+  "random_seed": 42,
+  "decimal_precision": 28,
+  "rounding_mode": "ROUND_HALF_EVEN",
+  "price_quantize": "0.000001",
+  "cash_quantize": "0.01",
+  "quantity_quantize": "0.000001",
+  "factor_quantize": "0.0000000001",
+  "reconciliation_tolerance": "0.000001",
+  "same_day_dividend_basis": "post_split",
+  "fx_conversion_date_policy": "ex_date",
+  "freshness_sla_seconds": 86400,
+  "storage_backend": "sqlite",
+  "sqlite_path": ":memory:",
+  "strict_unsupported_actions": false
+}

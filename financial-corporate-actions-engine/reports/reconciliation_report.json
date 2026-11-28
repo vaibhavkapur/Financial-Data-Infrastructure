@@ -1,0 +1,91 @@
+{
+  "data_provenance": "synthetic_deterministic_fixtures",
+  "reconciliations": {
+    "SEC-ACME (post-correction)": {
+      "account_id": "ACCT-SIM-001",
+      "applied_action_count": 4,
+      "as_of_time": "2025-01-15T22:00:00Z",
+      "completeness_ratio": "1.0000",
+      "end_date": "2025-01-15",
+      "freshness_sla_breaches": 0,
+      "max_freshness_lag_seconds": 900.0,
+      "notes": [],
+      "portfolio_gross_return": "0.0000000000",
+      "quarantined_action_count": 0,
+      "reconciled": true,
+      "return_discrepancy": "0.0000000000",
+      "security_id": "SEC-ACME",
+      "split_jump_checks_passed": true,
+      "start_date": "2025-01-02",
+      "tolerance": "0.000001",
+      "tr_series_return": "0.0000000000"
+    },
+    "SEC-EURO (same-day split+FX div, merger quarantined)": {
+      "account_id": "ACCT-SIM-001",
+      "applied_action_count": 2,
+      "as_of_time": "2025-01-10T22:00:00Z",
+      "completeness_ratio": "1.0000",
+      "end_date": "2025-01-10",
+      "freshness_sla_breaches": 0,
+      "max_freshness_lag_seconds": 600.0,
+      "notes": [
+        "1 unsupported action(s) quarantined: CA-EURO-MRG-01(MERGER)"
+      ],
+      "portfolio_gross_return": "0.0000000000",
+      "quarantined_action_count": 1,
+      "reconciled": true,
+      "return_discrepancy": "0.0000000000",
+      "security_id": "SEC-EURO",
+      "split_jump_checks_passed": true,
+      "start_date": "2025-01-02",
+      "tolerance": "0.000001",
+      "tr_series_return": "0.0000000000"
+    },
+    "SEC-REV (reverse split, cancelled div)": {
+      "account_id": "ACCT-SIM-001",
+      "applied_action_count": 1,
+      "as_of_time": "2025-01-08T22:00:00Z",
+      "completeness_ratio": "1.0000",
+      "end_date": "2025-01-08",
+      "freshness_sla_breaches": 0,
+      "max_freshness_lag_seconds": 600.0,
+      "notes": [],
+      "portfolio_gross_return": "0.0000000000",
+      "quarantined_action_count": 0,
+      "reconciled": true,
+      "return_discrepancy": "0.0000000000",
+      "security_id": "SEC-REV",
+      "split_jump_checks_passed": true,
+      "start_date": "2025-01-02",
+      "tolerance": "0.000001",
+      "tr_series_return": "0.0000000000"
+    }
+  },
+  "report_type": "reconciliation_and_data_quality_diagnostics",
+  "runtime_metadata": {
+    "config": {
+      "cash_quantize": "0.01",
+      "config_version": "1.0.0",
+      "decimal_precision": 28,
+      "engine_version": "1.0.0",
+      "factor_quantize": "1E-10",
+      "freshness_sla_seconds": 86400,
+      "fx_conversion_date_policy": "ex_date",
+      "price_quantize": "0.000001",
+      "quantity_quantize": "0.000001",
+      "random_seed": 42,
+      "reconciliation_tolerance": "0.000001",
+      "rounding_mode": "ROUND_HALF_EVEN",
+      "same_day_dividend_basis": "post_split",
+      "schema_version": "1.0.0",
+      "sqlite_path": ":memory:",
+      "storage_backend": "sqlite",
+      "strict_unsupported_actions": false
+    },
+    "machine": "arm64",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "polars_installed": false,
+    "python_version": "3.9.6",
+    "reproducible_digest_match": true
+  }
+}

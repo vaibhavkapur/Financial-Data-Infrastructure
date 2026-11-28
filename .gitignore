@@ -10,3 +10,11 @@ financial-feature-store/data/exports/
 financial-feature-store/data/offline/
 financial-feature-store/data/online/
 financial-feature-store/data/registry/
+distributed-quant-research-platform/reports/runs/
+distributed-quant-research-platform/reports/experiment_registry.sqlite
+distributed-quant-research-platform/reports/experiment_registry.sqlite-shm
+distributed-quant-research-platform/reports/experiment_registry.sqlite-wal
+distributed-tick-data-database/bin/
+distributed-tick-data-database/data/runtime/
+distributed-tick-data-database/data/bench_runtime/
+security-master-platform/.runtime/

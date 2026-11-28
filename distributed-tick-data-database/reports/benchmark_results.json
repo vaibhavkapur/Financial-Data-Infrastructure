@@ -1,0 +1,134 @@
+{
+  "disclaimer": "Measured locally on single-node multi-shard topology; single-node tests are not distributed multi-host scalability evidence.",
+  "ingestion": {
+    "ingest_duration_ms": 700.912,
+    "ingest_plus_final_flush_duration_ms": 859.892,
+    "throughput_accepted_ticks_per_sec": 142671.1270188403,
+    "throughput_including_flush_tps": 116293.60092332747,
+    "throughput_raw_ticks_per_sec": 144055.03695092307
+  },
+  "query_latency": {
+    "avg_rows_per_query": 201.69666666666666,
+    "max_ms": 7.399,
+    "p50_ms": 2.139,
+    "p95_ms": 4.197,
+    "p99_ms": 6.594,
+    "queries_executed": 300,
+    "segment_pruning_ratio": 0.8378378378378378,
+    "segments_pruned": 1643,
+    "segments_scanned": 318,
+    "total_rows_returned": 60509,
+    "window_minutes": 5
+  },
+  "recovery_under_load": {
+    "corrupt_tail_injected_bytes": 42,
+    "recovered_events_queried": 10000,
+    "shard_reports": [
+      {
+        "shard_id": 0,
+        "wal_stats": {
+          "frames_recovered": 0,
+          "events_recovered": 0,
+          "corrupt_tail_detected": true,
+          "truncated_corrupt_bytes": 42,
+          "valid_end_offset": 0
+        },
+        "applied_wal_frames": 0,
+        "applied_wal_events": 0,
+        "orphaned_temp_files_cleaned": 0,
+        "segments_loaded": 0,
+        "recovery_duration_ms": 4.096
+      },
+      {
+        "shard_id": 1,
+        "wal_stats": {
+          "frames_recovered": 10,
+          "events_recovered": 4999,
+          "corrupt_tail_detected": false,
+          "truncated_corrupt_bytes": 0,
+          "valid_end_offset": 856574
+        },
+        "applied_wal_frames": 10,
+        "applied_wal_events": 4999,
+        "orphaned_temp_files_cleaned": 0,
+        "segments_loaded": 7,
+        "recovery_duration_ms": 11.762
+      },
+      {
+        "shard_id": 2,
+        "wal_stats": {
+          "frames_recovered": 10,
+          "events_recovered": 2478,
+          "corrupt_tail_detected": false,
+          "truncated_corrupt_bytes": 0,
+          "valid_end_offset": 415516
+        },
+        "applied_wal_frames": 10,
+        "applied_wal_events": 2478,
+        "orphaned_temp_files_cleaned": 0,
+        "segments_loaded": 6,
+        "recovery_duration_ms": 6.266
+      },
+      {
+        "shard_id": 3,
+        "wal_stats": {
+          "frames_recovered": 10,
+          "events_recovered": 2523,
+          "corrupt_tail_detected": false,
+          "truncated_corrupt_bytes": 0,
+          "valid_end_offset": 424314
+        },
+        "applied_wal_frames": 10,
+        "applied_wal_events": 2523,
+        "orphaned_temp_files_cleaned": 0,
+        "segments_loaded": 6,
+        "recovery_duration_ms": 5.818
+      }
+    ],
+    "total_recovery_duration_ms": 27.945,
+    "wal_events_before_crash": 10000,
+    "zero_accepted_ticks_lost": true
+  },
+  "report_version": "1.0.0",
+  "runtime": {
+    "recorded_at_utc": "2026-11-28T05:01:31Z",
+    "go_version": "go1.27.1",
+    "goos": "darwin",
+    "goarch": "arm64",
+    "num_cpu": 10,
+    "topology": "single-node-multi-shard",
+    "node_id": "bench-local-01",
+    "num_shards": 4,
+    "config_version": "1.0.0",
+    "seed": 20261128
+  },
+  "storage_and_compression": {
+    "bytes_per_accepted_tick": 24.52842,
+    "compressed_segment_bytes": 2452842,
+    "compression_ratio_vs_jsonl": 16.395791494111727,
+    "parquet_sample_export": {
+      "export_id": "exp-30a4396065c988c2",
+      "format": "parquet",
+      "output_path": "/var/folders/g_/j9s29m557kb9v1v8llg48ht80000gn/T/tickdb-bench-1712097743/sample.parquet",
+      "row_count": 20000,
+      "bytes_written": 561541,
+      "logical_sha256": "ebe9751d4554801b42f249e93f030e19111ba6fe8ecc6cbae1fa524800a032cc",
+      "file_sha256": "fa80243c23292c3cee4829d5d0846886f24afede43aa2b6663505bd68c849922",
+      "duration_ms": 42.712
+    },
+    "raw_jsonl_bytes": 40216286,
+    "total_segments": 19,
+    "uncompressed_columnar_bytes": 4539019
+  },
+  "workload": {
+    "accepted_unique_events": 100000,
+    "batch_size": 2000,
+    "batches_committed": 51,
+    "compression": "delta_dict_gzip",
+    "duplicate_events": 970,
+    "generation_ms": 26.734,
+    "late_events_accepted": 1324,
+    "total_raw_events": 100970,
+    "wal_sync_mode": "fsync_per_batch"
+  }
+}

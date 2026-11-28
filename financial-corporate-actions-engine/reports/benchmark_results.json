@@ -1,0 +1,27 @@
+{
+  "data_provenance": "synthetic_generated_seed_42",
+  "measured_metrics": {
+    "all_series_reconciled": true,
+    "ingest_bars_per_second": 222989.7,
+    "ingest_seconds": 0.0448,
+    "max_return_discrepancy": "0.0000000492",
+    "pit_query_max_ms": 68.84,
+    "pit_query_mean_ms": 66.47,
+    "pit_query_median_ms": 66.19
+  },
+  "report_type": "synthetic_benchmark_results",
+  "runtime_metadata": {
+    "config_version": "1.0.0",
+    "machine": "arm64",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.9.6",
+    "random_seed": 42,
+    "storage_backend": "sqlite"
+  },
+  "workload": {
+    "days_per_security": 1000,
+    "num_securities": 10,
+    "total_corporate_actions": 180,
+    "total_price_bars": 10000
+  }
+}

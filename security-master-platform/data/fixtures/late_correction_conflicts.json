@@ -1,0 +1,108 @@
+{
+  "fixture_id": "late_correction_conflicts_v1",
+  "description": "M3 deterministic scenarios covering (1) late same-source reference correction preserving bitemporal history and (2) cross-vendor conflicting ISIN quarantined for reviewer workflow.",
+  "schema_version": "1.0.0",
+  "events": [
+    {
+      "event_type": "INSTRUMENT_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "VENDOR_ALPHA",
+      "source_event_id": "LC-INS-001",
+      "valid_from": "2024-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-01-02T00:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-4524211962DF",
+        "name": "Synthetic Nova Holding Co",
+        "asset_class": "EQUITY",
+        "issuer_name": "Synthetic Nova Group",
+        "country_of_risk": "US",
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "LISTING_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "VENDOR_ALPHA",
+      "source_event_id": "LC-LST-001",
+      "valid_from": "2024-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-01-02T00:00:00Z",
+      "payload": {
+        "listing_id": "LST-D3524489BEEA",
+        "instrument_id": "SEC-4524211962DF",
+        "mic": "XNAS",
+        "ticker": "NOVA",
+        "currency": "USD",
+        "is_primary": true,
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "VENDOR_ALPHA",
+      "source_event_id": "LC-IDM-ISIN-1",
+      "valid_from": "2024-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-01-02T00:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-4524211962DF",
+        "listing_id": null,
+        "namespace": "ISIN",
+        "identifier_value": "US0000004046",
+        "mic": null
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "VENDOR_ALPHA",
+      "source_event_id": "LC-IDM-FIGI-1",
+      "valid_from": "2024-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-01-02T00:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-4524211962DF",
+        "listing_id": null,
+        "namespace": "OPENFIGI",
+        "identifier_value": "BBG000SYN004",
+        "mic": null
+      }
+    },
+    {
+      "event_type": "INSTRUMENT_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "VENDOR_ALPHA",
+      "source_event_id": "LC-INS-001-CORR",
+      "valid_from": "2024-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-01-10T12:00:00Z",
+      "supersedes_event_id": "LC-INS-001",
+      "payload": {
+        "instrument_id": "SEC-4524211962DF",
+        "name": "Synthetic Nova Holdings Inc",
+        "asset_class": "EQUITY",
+        "issuer_name": "Synthetic Nova Group",
+        "country_of_risk": "US",
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "VENDOR_BETA",
+      "source_event_id": "VB-IDM-CONFLICT-1",
+      "valid_from": "2024-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-01-12T08:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-4524211962DF",
+        "listing_id": null,
+        "namespace": "ISIN",
+        "identifier_value": "US0000009995",
+        "mic": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "fixture_name": "valid_reference_ticks.jsonl",
+  "description": "Hand-calculated expected outcomes for 10 raw input lines across AAPL and MSFT with 1 exact duplicate, 2 late events, 1 remaining open gap (AAPL seq 4), and 1 cross-hour boundary.",
+  "total_input_events": 10,
+  "accepted_unique_events": 9,
+  "duplicate_events": 1,
+  "late_events_accepted": 2,
+  "expected_aapl_ordered_sequences": [1, 2, 3, 5, 6],
+  "expected_msft_ordered_sequences": [1, 2, 3, 4],
+  "expected_open_gaps": [
+    {
+      "source_id": "sim-feed-a",
+      "instrument_id": "AAPL",
+      "start_seq": 4,
+      "end_seq": 4
+    }
+  ],
+  "expected_completeness": {
+    "AAPL": {
+      "received_unique": 5,
+      "expected_span": 6,
+      "missing_sequences": 1,
+      "completeness_ratio": 0.8333333333333334
+    },
+    "MSFT": {
+      "received_unique": 4,
+      "expected_span": 4,
+      "missing_sequences": 0,
+      "completeness_ratio": 1.0
+    }
+  }
+}

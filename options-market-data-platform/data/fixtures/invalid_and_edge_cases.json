@@ -1,0 +1,247 @@
+{
+  "bundle_name": "invalid_and_edge_cases_v1",
+  "schema_version": "1.0.0",
+  "provenance_note": "Synthetic edge-case fixture covering expired options, strike/decimal mismatches, crossed/locked quotes, unsupported exercise styles, and arbitrage violations.",
+  "contracts": [
+    {
+      "option_id": "OPT:EDGE:20260619:C:100.0000",
+      "contract_version": 1,
+      "underlying_symbol": "EDGE",
+      "expiry_date": "2026-06-19",
+      "option_right": "C",
+      "strike": "100.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "EUROPEAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-01T12:00:00Z"
+    },
+    {
+      "option_id": "OPT:EDGE:20270619:C:100.0000",
+      "contract_version": 1,
+      "underlying_symbol": "EDGE",
+      "expiry_date": "2027-06-19",
+      "option_right": "C",
+      "strike": "100.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "EUROPEAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-01T12:00:00Z"
+    },
+    {
+      "option_id": "OPT:EDGE:20270619:P:100.0000",
+      "contract_version": 1,
+      "underlying_symbol": "EDGE",
+      "expiry_date": "2027-06-19",
+      "option_right": "P",
+      "strike": "100.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "EUROPEAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-01T12:00:00Z"
+    },
+    {
+      "option_id": "OPT:EDGE:20270619:C:105.0000",
+      "contract_version": 1,
+      "underlying_symbol": "EDGE",
+      "expiry_date": "2027-06-19",
+      "option_right": "C",
+      "strike": "105.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "EUROPEAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-01T12:00:00Z"
+    },
+    {
+      "option_id": "OPT:EDGE:20270619:C:110.0000",
+      "contract_version": 1,
+      "underlying_symbol": "EDGE",
+      "expiry_date": "2027-06-19",
+      "option_right": "C",
+      "strike": "110.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "AMERICAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-01T12:00:00Z"
+    },
+    {
+      "option_id": "OPT:EDGE:20270619:C:80.0000",
+      "contract_version": 1,
+      "underlying_symbol": "EDGE",
+      "expiry_date": "2027-06-19",
+      "option_right": "C",
+      "strike": "80.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "EUROPEAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-01T12:00:00Z"
+    }
+  ],
+  "calendars": [
+    {
+      "calendar_id": "US_OPT_SYNTH",
+      "calendar_version": 1,
+      "expiry_date": "2026-06-19",
+      "expiry_timestamp_utc": "2026-06-19T20:00:00Z",
+      "is_trading_day": true,
+      "settlement_type": "PM",
+      "source_id": "synthetic_calendar",
+      "schema_version": "1.0.0"
+    },
+    {
+      "calendar_id": "US_OPT_SYNTH",
+      "calendar_version": 1,
+      "expiry_date": "2027-06-19",
+      "expiry_timestamp_utc": "2027-06-19T20:00:00Z",
+      "is_trading_day": true,
+      "settlement_type": "PM",
+      "source_id": "synthetic_calendar",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "rate_curves": [
+    {
+      "curve_id": "USD_OIS_EDGE",
+      "curve_version": 1,
+      "as_of_time": "2026-06-20T13:00:00Z",
+      "tenor_days": 365,
+      "risk_free_rate": 0.05,
+      "dividend_yield": 0.00,
+      "source_id": "synthetic_rates",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "underlying_quotes": [
+    {
+      "underlying_symbol": "EDGE",
+      "quote_version": 1,
+      "event_time": "2026-06-20T14:00:00Z",
+      "ingestion_time": "2026-06-20T14:00:01Z",
+      "bid": "99.95",
+      "ask": "100.05",
+      "last_price": "100.00",
+      "source_id": "synthetic_nbbo",
+      "source_sequence": 2001,
+      "schema_version": "1.0.0"
+    }
+  ],
+  "snapshots": [
+    {
+      "snapshot_id": "EDGE-20260620T140005Z",
+      "underlying_symbol": "EDGE",
+      "snapshot_time": "2026-06-20T14:00:05Z",
+      "ingestion_time": "2026-06-20T14:00:06Z",
+      "source_id": "synthetic_edge_feed",
+      "schema_version": "1.0.0",
+      "quotes": [
+        {
+          "option_id": "OPT:EDGE:20260619:C:100.0000",
+          "quote_version": 1,
+          "underlying_symbol": "EDGE",
+          "reported_strike": "100.00",
+          "event_time": "2026-06-20T14:00:00Z",
+          "ingestion_time": "2026-06-20T14:00:01Z",
+          "bid": "0.10",
+          "ask": "0.20",
+          "bid_size": 10,
+          "ask_size": 10,
+          "source_id": "synthetic_edge_feed",
+          "source_sequence": 6001,
+          "schema_version": "1.0.0"
+        },
+        {
+          "option_id": "OPT:EDGE:20270619:C:100.0000",
+          "quote_version": 1,
+          "underlying_symbol": "EDGE",
+          "reported_strike": "10000",
+          "event_time": "2026-06-20T14:00:00Z",
+          "ingestion_time": "2026-06-20T14:00:01Z",
+          "bid": "10.30",
+          "ask": "10.50",
+          "bid_size": 20,
+          "ask_size": 20,
+          "source_id": "synthetic_edge_feed",
+          "source_sequence": 6002,
+          "schema_version": "1.0.0"
+        },
+        {
+          "option_id": "OPT:EDGE:20270619:P:100.0000",
+          "quote_version": 1,
+          "underlying_symbol": "EDGE",
+          "reported_strike": "100.00",
+          "event_time": "2026-06-20T14:00:00Z",
+          "ingestion_time": "2026-06-20T14:00:01Z",
+          "bid": "6.20",
+          "ask": "5.90",
+          "bid_size": 15,
+          "ask_size": 15,
+          "source_id": "synthetic_edge_feed",
+          "source_sequence": 6003,
+          "schema_version": "1.0.0"
+        },
+        {
+          "option_id": "OPT:EDGE:20270619:C:105.0000",
+          "quote_version": 1,
+          "underlying_symbol": "EDGE",
+          "reported_strike": "105.00",
+          "event_time": "2026-06-20T14:00:00Z",
+          "ingestion_time": "2026-06-20T14:00:01Z",
+          "bid": "8.00",
+          "ask": "8.00",
+          "bid_size": 10,
+          "ask_size": 10,
+          "source_id": "synthetic_edge_feed",
+          "source_sequence": 6004,
+          "schema_version": "1.0.0"
+        },
+        {
+          "option_id": "OPT:EDGE:20270619:C:110.0000",
+          "quote_version": 1,
+          "underlying_symbol": "EDGE",
+          "reported_strike": "110.00",
+          "event_time": "2026-06-20T14:00:00Z",
+          "ingestion_time": "2026-06-20T14:00:01Z",
+          "bid": "6.10",
+          "ask": "6.30",
+          "bid_size": 10,
+          "ask_size": 10,
+          "source_id": "synthetic_edge_feed",
+          "source_sequence": 6005,
+          "schema_version": "1.0.0"
+        },
+        {
+          "option_id": "OPT:EDGE:20270619:C:80.0000",
+          "quote_version": 1,
+          "underlying_symbol": "EDGE",
+          "reported_strike": "80.00",
+          "event_time": "2026-06-20T14:00:00Z",
+          "ingestion_time": "2026-06-20T14:00:01Z",
+          "bid": "2.00",
+          "ask": "2.10",
+          "bid_size": 5,
+          "ask_size": 5,
+          "source_id": "synthetic_edge_feed",
+          "source_sequence": 6006,
+          "schema_version": "1.0.0"
+        }
+      ]
+    }
+  ]
+}

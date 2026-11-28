@@ -1,0 +1,56 @@
+{
+  "base_seed": 2025,
+  "budget": {
+    "max_concurrency": 8,
+    "max_cpu_seconds": 300.0,
+    "max_estimated_cost_usd": 2.0,
+    "max_memory_mb": 4096.0,
+    "max_trials": 48,
+    "max_wall_seconds": 300.0
+  },
+  "cost_model": {
+    "artifact_gb_write_usd": 0.02,
+    "cpu_core_hour_usd": 0.048,
+    "memory_gb_hour_usd": 0.006,
+    "model_label": "synthetic-cpu-worker-v1"
+  },
+  "dataset_manifest_path": "../data/fixtures/equities_synthetic_v1/manifest.json",
+  "description": "Synthetic CPU-bound bootstrap sweep designed to measure real multi-core distributed speedup.",
+  "evaluation_as_of": null,
+  "expected_dataset_sha256": "f000552a6f419e1d020e8133a3fd50c5385e046a7564c38fd3fc83aaf123d889",
+  "experiment_id": "exp-scaling-benchmark",
+  "explicit_trials": [],
+  "max_retries": 2,
+  "name": "Scaling Benchmark Sweep (24 CPU-bound bootstrap trials)",
+  "parameter_grid": {
+    "bootstrap_draws": [
+      2500
+    ],
+    "entry_z": [
+      0.75,
+      1.25
+    ],
+    "exit_z": [
+      0.25
+    ],
+    "fee_bps": [
+      5.0
+    ],
+    "lookback_window": [
+      5,
+      10,
+      15,
+      20,
+      30,
+      40
+    ],
+    "symbol": [
+      "SYM_A",
+      "SYM_B"
+    ]
+  },
+  "retry_backoff_seconds": 0.01,
+  "schema_version": "dqrp.v1",
+  "spec_sha256": "cbd4a237b97caee84655245f9f6eaec965c999c60cafdee7748465264fe34f02",
+  "strategy_name": "momentum_zscore"
+}

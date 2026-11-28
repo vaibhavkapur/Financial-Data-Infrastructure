@@ -1,0 +1,26 @@
+{
+  "created_at": "2025-01-10T00:00:00Z",
+  "dataset_id": "synthetic-boundary-flat",
+  "expected_row_count": 2,
+  "format": "jsonl",
+  "manifest_sha256": "251bf7a271483d72462ec5544959fab9986045102b61e531848ea0a6fb7d9305",
+  "partitions": [
+    {
+      "content_sha256": "6ea9cb7701b1f6fed758201289839134436ee0421d0db14716653b6f27ad7955",
+      "max_availability_time": "2025-01-03T21:00:00Z",
+      "max_event_time": "2025-01-03T21:00:00Z",
+      "min_event_time": "2025-01-02T21:00:00Z",
+      "partition_id": "part-000",
+      "relative_path": "flat_2bars.jsonl",
+      "row_count": 2,
+      "size_bytes": 476
+    }
+  ],
+  "schema_version": "dqrp.v1",
+  "source_lineage": "scripts/generate_fixtures.py:boundary",
+  "source_name": "synthetic-boundary",
+  "symbols": [
+    "FLAT"
+  ],
+  "version": "1.0.0"
+}

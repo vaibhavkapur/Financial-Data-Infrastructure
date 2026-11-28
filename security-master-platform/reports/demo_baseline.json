@@ -1,0 +1,561 @@
+{
+  "data_provenance": "synthetic_deterministic_fixtures",
+  "ingest_outcomes": {
+    "corporate_actions.json": [
+      {
+        "conflict_id": null,
+        "event_id": "EVT-C7518DCD9DC9F74E",
+        "message": "Listing version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "LSTV-6493A9FDA25D03",
+          "LSTV-DD7FAC8F0C2A41",
+          "LSTV-59AD510DFBEE06"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-7A6DA6C278B947C7",
+        "message": "Corporate action link TICKER_CHANGE applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "ACT-67F7995A645043"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-C1DC74CD42DEDD65",
+        "message": "Instrument version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "INS-17220D93B83EAD"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-1733E896FB8ADB4D",
+        "message": "Listing version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "LSTV-F8238342B93B27"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-87104C784F371A51",
+        "message": "Identifier mapping applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "IDM-552E4AEC53574A"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-CF9392DA6EA5080B",
+        "message": "Identifier mapping applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "IDM-AE8689F83E7707"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-7456C251EC3BD8C7",
+        "message": "Corporate action link MERGER applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "ACT-45A93820469F85"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-0EDE3136E02D0A91",
+        "message": "Corporate action link SPLIT applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "ACT-6DAA0EDF3EE7CD"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-D08D732FA5055E9D",
+        "message": "Instrument version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "INS-1A501C81CAB346"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-151933C7F664C02C",
+        "message": "Listing version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "LSTV-111951AE2E0FCE"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-28B4D05FE3DFD575",
+        "message": "Identifier mapping applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "IDM-2969E0F88019E2"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-A141154B746A846E",
+        "message": "Identifier mapping applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "IDM-A7EE9EA99B331F"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-92C22F85AC60959C",
+        "message": "Corporate action link SPINOFF applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "ACT-E2DB9AAE50DA72"
+        ]
+      }
+    ],
+    "late_correction_conflicts.json": [
+      {
+        "conflict_id": null,
+        "event_id": "EVT-ACD2D569B9D72495",
+        "message": "Instrument version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "INS-B4850F905C1F69"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-D4956059AF9932F9",
+        "message": "Listing version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "LSTV-32C86D296DB26D"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-5322F23A5AC12B2B",
+        "message": "Identifier mapping applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "IDM-C9613D5380F9B5"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-6761CDF1FF41B1D5",
+        "message": "Identifier mapping applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "IDM-5A29CD396CC381"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-62F9078AE685676E",
+        "message": "Instrument version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "INS-02055645D47191"
+        ]
+      },
+      {
+        "conflict_id": "CNF-BB94CB3018B1",
+        "event_id": "EVT-9BDA8DE55EDD6D10",
+        "message": "Conflicting ISIN values for SEC-4524211962DF across sources; quarantined for reviewer resolution.",
+        "status": "QUARANTINED",
+        "version_ids": []
+      }
+    ],
+    "ticker_reuse_dual_listing.json": [
+      {
+        "conflict_id": null,
+        "event_id": "EVT-7699194D4C4D6586",
+        "message": "Instrument version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "INS-A0613078AC429E"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-63F558A4B661132A",
+        "message": "Listing version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "LSTV-720BDB9D29E3C1"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-2D856AD5388F50E0",
+        "message": "Identifier mapping applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "IDM-4D5B0EDC53178E"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-1FAE8DD8A76CDA51",
+        "message": "Identifier mapping applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "IDM-58B14C067A5DDE"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-C5FE307EB8259F89",
+        "message": "Instrument version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "INS-6D0580537214AE"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-955ADBE47B258324",
+        "message": "Listing version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "LSTV-5B962483E77EAE"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-9FDEDE657353A1BF",
+        "message": "Identifier mapping applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "IDM-D0B402DC9EC408"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-264BE2F928AD361C",
+        "message": "Identifier mapping applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "IDM-2100D758A7580A"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-C28022588A18379D",
+        "message": "Instrument version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "INS-44FE4F455468E8"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-CE1F5842A8D7D219",
+        "message": "Listing version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "LSTV-0D1A3D29C66B4C"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-CFB2397465B736F5",
+        "message": "Listing version applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "LSTV-1A22A72A6E8481"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-538736F71807A51F",
+        "message": "Identifier mapping applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "IDM-BA7B4406BB6A28"
+        ]
+      },
+      {
+        "conflict_id": null,
+        "event_id": "EVT-D65B9AB024FF4A78",
+        "message": "Identifier mapping applied.",
+        "status": "APPLIED",
+        "version_ids": [
+          "IDM-DBDD04595DC6D7"
+        ]
+      }
+    ]
+  },
+  "quality_metrics": {
+    "active_identifier_mappings": 30,
+    "active_instruments": 6,
+    "active_listings": 7,
+    "as_of_observed": "2024-11-01T12:00:00Z",
+    "completeness_ratio": 1.0,
+    "corporate_action_links": 4,
+    "incomplete_instruments": [],
+    "lineage_coverage_ratio": 1.0,
+    "max_observation_lag_seconds": 979200.0,
+    "open_conflicts": 0,
+    "resolved_conflicts": 1,
+    "stale_sources": [
+      "CORP_ACTION_ENGINE",
+      "EXCHANGE_OFFICIAL",
+      "VENDOR_ALPHA",
+      "VENDOR_BETA"
+    ],
+    "total_events": 33
+  },
+  "report_type": "demo_baseline",
+  "reproducibility": {
+    "exact_match": true,
+    "post_replay_snapshot_hash": "964f4fca7362504e2ceffd3e3c80da608da12a6a5ea30fc0890de10647674dd1",
+    "pre_replay_snapshot_hash": "964f4fca7362504e2ceffd3e3c80da608da12a6a5ea30fc0890de10647674dd1",
+    "restarted_snapshot_hash": "964f4fca7362504e2ceffd3e3c80da608da12a6a5ea30fc0890de10647674dd1"
+  },
+  "runtime": {
+    "config_version": "1.0.0",
+    "deterministic_seed": 20260101,
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_version": "3.9.6",
+    "schema_version": "1.0.0"
+  },
+  "scenarios": {
+    "conflict_quarantine_and_review": {
+      "blocked_lookup_error": {
+        "error": {
+          "code": "CONFLICT_BLOCKED",
+          "details": {
+            "conflict_ids": [
+              "CNF-BB94CB3018B1"
+            ],
+            "conflict_types": [
+              "CONFLICTING_IDENTIFIER_VALUE"
+            ],
+            "namespace": "MIC_TICKER",
+            "value": "XNAS:NOVA"
+          },
+          "message": "Lookup for MIC_TICKER=XNAS:NOVA is blocked by 1 open conflict ticket(s)."
+        }
+      },
+      "conflict_id": "CNF-BB94CB3018B1",
+      "conflict_type": "CONFLICTING_IDENTIFIER_VALUE",
+      "review_outcome": {
+        "conflict_id": "CNF-BB94CB3018B1",
+        "event_id": "EVT-32303EBA7F06C792",
+        "message": "Conflict CNF-BB94CB3018B1 resolved with KEEP_EXISTING by analyst_data_ops.",
+        "status": "RESOLVED",
+        "version_ids": []
+      }
+    },
+    "corporate_action_lineage": {
+      "as_of_observed": "2024-12-01T00:00:00Z",
+      "as_of_valid": "2024-12-01T00:00:00Z",
+      "instrument_id": "SEC-4524211962DF",
+      "predecessors": [
+        {
+          "action_type": "TICKER_CHANGE",
+          "effective_at": "2024-03-01T00:00:00Z",
+          "from_instrument_id": "SEC-4524211962DF",
+          "from_listing_id": "LST-D3524489BEEA",
+          "lineage": {
+            "conflict_id": null,
+            "review_rationale": null,
+            "reviewer_id": null,
+            "schema_version": "1.0.0",
+            "source_event_id": "CA-LINK-RENAME-1",
+            "source_system": "CORP_ACTION_ENGINE",
+            "supersedes_version_id": null
+          },
+          "link_id": "ACT-67F7995A645043",
+          "metadata": {
+            "new_ticker": "NVAX",
+            "old_ticker": "NOVA"
+          },
+          "observed_at": "2024-02-28T16:00:00Z",
+          "ratio": "1.0",
+          "superseded_at": null,
+          "to_instrument_id": "SEC-4524211962DF",
+          "to_listing_id": "LST-D3524489BEEA"
+        }
+      ],
+      "successors": [
+        {
+          "action_type": "TICKER_CHANGE",
+          "effective_at": "2024-03-01T00:00:00Z",
+          "from_instrument_id": "SEC-4524211962DF",
+          "from_listing_id": "LST-D3524489BEEA",
+          "lineage": {
+            "conflict_id": null,
+            "review_rationale": null,
+            "reviewer_id": null,
+            "schema_version": "1.0.0",
+            "source_event_id": "CA-LINK-RENAME-1",
+            "source_system": "CORP_ACTION_ENGINE",
+            "supersedes_version_id": null
+          },
+          "link_id": "ACT-67F7995A645043",
+          "metadata": {
+            "new_ticker": "NVAX",
+            "old_ticker": "NOVA"
+          },
+          "observed_at": "2024-02-28T16:00:00Z",
+          "ratio": "1.0",
+          "superseded_at": null,
+          "to_instrument_id": "SEC-4524211962DF",
+          "to_listing_id": "LST-D3524489BEEA"
+        },
+        {
+          "action_type": "MERGER",
+          "effective_at": "2024-06-01T00:00:00Z",
+          "from_instrument_id": "SEC-4524211962DF",
+          "from_listing_id": "LST-D3524489BEEA",
+          "lineage": {
+            "conflict_id": null,
+            "review_rationale": null,
+            "reviewer_id": null,
+            "schema_version": "1.0.0",
+            "source_event_id": "CA-LINK-MERGER-1",
+            "source_system": "CORP_ACTION_ENGINE",
+            "supersedes_version_id": null
+          },
+          "link_id": "ACT-45A93820469F85",
+          "metadata": {
+            "deal_type": "STOCK_FOR_STOCK"
+          },
+          "observed_at": "2024-05-30T12:00:00Z",
+          "ratio": "0.5",
+          "superseded_at": null,
+          "to_instrument_id": "SEC-8CD5A4F2A1D5",
+          "to_listing_id": "LST-5465B5564FE5"
+        },
+        {
+          "action_type": "SPLIT",
+          "effective_at": "2024-09-01T00:00:00Z",
+          "from_instrument_id": "SEC-8CD5A4F2A1D5",
+          "from_listing_id": "LST-5465B5564FE5",
+          "lineage": {
+            "conflict_id": null,
+            "review_rationale": null,
+            "reviewer_id": null,
+            "schema_version": "1.0.0",
+            "source_event_id": "CA-LINK-SPLIT-1",
+            "source_system": "CORP_ACTION_ENGINE",
+            "supersedes_version_id": null
+          },
+          "link_id": "ACT-6DAA0EDF3EE7CD",
+          "metadata": {
+            "split_terms": "2-for-1"
+          },
+          "observed_at": "2024-08-25T12:00:00Z",
+          "ratio": "2.0",
+          "superseded_at": null,
+          "to_instrument_id": "SEC-8CD5A4F2A1D5",
+          "to_listing_id": "LST-5465B5564FE5"
+        },
+        {
+          "action_type": "SPINOFF",
+          "effective_at": "2024-11-01T00:00:00Z",
+          "from_instrument_id": "SEC-8CD5A4F2A1D5",
+          "from_listing_id": "LST-5465B5564FE5",
+          "lineage": {
+            "conflict_id": null,
+            "review_rationale": null,
+            "reviewer_id": null,
+            "schema_version": "1.0.0",
+            "source_event_id": "CA-LINK-SPINOFF-1",
+            "source_system": "CORP_ACTION_ENGINE",
+            "supersedes_version_id": null
+          },
+          "link_id": "ACT-E2DB9AAE50DA72",
+          "metadata": {
+            "distribution_basis": "1 share SPCO per 4 shares VRTX"
+          },
+          "observed_at": "2024-10-25T12:00:00Z",
+          "ratio": "0.25",
+          "superseded_at": null,
+          "to_instrument_id": "SEC-5A9FF3F0B3E4",
+          "to_listing_id": "LST-98CF43435987"
+        }
+      ],
+      "terminal_instrument_ids": [
+        "SEC-8CD5A4F2A1D5"
+      ]
+    },
+    "dual_listing": {
+      "bare_ticker_error": {
+        "error": {
+          "code": "AMBIGUOUS_MAPPING",
+          "details": {
+            "as_of_observed": "2024-01-01T00:00:00Z",
+            "as_of_valid": "2023-06-01T00:00:00Z",
+            "candidates": [
+              {
+                "currency": "GBP",
+                "instrument_id": "SEC-0C62E574E753",
+                "listing_id": "LST-0D1190BD20E4",
+                "mic": "XLON"
+              },
+              {
+                "currency": "USD",
+                "instrument_id": "SEC-0C62E574E753",
+                "listing_id": "LST-40BDA666A992",
+                "mic": "XNYS"
+              }
+            ],
+            "namespace": "TICKER",
+            "value": "ORION"
+          },
+          "message": "Ambiguous lookup for TICKER=ORION: matched 2 distinct listings/instruments. Specify MIC or canonical ID."
+        }
+      },
+      "shared_instrument_id": "SEC-0C62E574E753",
+      "xlon_currency": "GBP",
+      "xlon_listing_id": "LST-0D1190BD20E4",
+      "xnys_currency": "USD",
+      "xnys_listing_id": "LST-40BDA666A992"
+    },
+    "late_reference_correction": {
+      "after_correction_lineage": {
+        "conflict_id": null,
+        "review_rationale": null,
+        "reviewer_id": null,
+        "schema_version": "1.0.0",
+        "source_event_id": "LC-INS-001-CORR",
+        "source_system": "VENDOR_ALPHA",
+        "supersedes_version_id": "INS-B4850F905C1F69"
+      },
+      "after_correction_name": "Synthetic Nova Holdings Inc",
+      "before_correction_name": "Synthetic Nova Holding Co"
+    },
+    "pre_observation_boundary": {
+      "error": {
+        "code": "PRE_OBSERVATION_LOOKUP",
+        "details": {
+          "as_of_observed": "2024-01-01T12:00:00Z",
+          "as_of_valid": "2024-01-01T12:00:00Z",
+          "earliest_observed_at": "2024-01-02T00:00:00Z",
+          "namespace": "MIC_TICKER",
+          "value": "XNAS:NOVA"
+        },
+        "message": "Historical lookup for MIC_TICKER=XNAS:NOVA at as_of_observed=2024-01-01T12:00:00Z precedes earliest observation time 2024-01-02T00:00:00Z."
+      }
+    },
+    "ticker_reuse": {
+      "acme_2020_instrument_id": "SEC-E19954A68605",
+      "acme_2020_name": "Synthetic Acme Legacy Corp",
+      "acme_2023_instrument_id": "SEC-B12CCB780542",
+      "acme_2023_name": "Synthetic Acme Robotics Inc"
+    }
+  }
+}

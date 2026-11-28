@@ -1,0 +1,43 @@
+{
+  "config_hash": "bb8620c6913e290ce6d0e8701bb058dc638cb645bb8b7b3b0231f5d13bd782e3",
+  "counters": {
+    "calendars_ingested": 2,
+    "consistency_errors": 0,
+    "contracts_ingested": 100,
+    "features_derived": 2000,
+    "ivs_computed": 1994,
+    "quotes_flagged": 0,
+    "quotes_processed": 2000,
+    "quotes_rejected": 0,
+    "quotes_valid": 2000,
+    "rate_points_ingested": 2,
+    "replay_mismatches": 0,
+    "replays_executed": 20,
+    "snapshots_ingested": 20,
+    "underlying_quotes_ingested": 20
+  },
+  "environment": {
+    "machine": "arm64",
+    "python_version": "3.9.6",
+    "system": "Darwin",
+    "topology": "single_node_local_sqlite"
+  },
+  "generated_at_utc": "2026-11-28T04:57:48Z",
+  "measured_metrics": {
+    "all_replays_identical": true,
+    "historical_query_seconds": 0.0412,
+    "ingest_and_derive_seconds": 0.2094,
+    "ingest_quotes_per_second": 9550.25,
+    "replay_all_seconds": 0.291,
+    "replay_quotes_per_second": 6872.37,
+    "snapshots_returned": 20,
+    "sqlite_db_size_bytes": 5185536
+  },
+  "workload": {
+    "contracts_per_snapshot": 100,
+    "num_snapshots": 20,
+    "random_seed": 20260619,
+    "synthetic_fixture": true,
+    "total_quotes": 2000
+  }
+}

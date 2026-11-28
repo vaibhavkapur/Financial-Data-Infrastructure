@@ -1,0 +1,31 @@
+{
+  "config_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "storage": {
+    "backend": "sqlite",
+    "sqlite_path": "data/omdp.sqlite3"
+  },
+  "validation": {
+    "max_quote_staleness_seconds": 300,
+    "max_ingestion_delay_seconds": 60,
+    "max_underlying_skew_seconds": 60,
+    "max_future_clock_skew_seconds": 5,
+    "allow_locked_quotes": true,
+    "exclude_stale_quotes_from_iv": true,
+    "supported_exercise_styles": ["EUROPEAN"],
+    "supported_schema_versions": ["1.0.0"]
+  },
+  "pricing": {
+    "day_count_convention": "ACT/365F",
+    "default_expiry_utc_hour": 20,
+    "default_expiry_utc_minute": 0,
+    "iv_min_vol": 1e-6,
+    "iv_max_vol": 5.0,
+    "iv_price_tolerance": 1e-10,
+    "iv_vol_tolerance": 1e-9,
+    "iv_max_iterations": 100
+  },
+  "reproducibility": {
+    "random_seed": 20260619
+  }
+}

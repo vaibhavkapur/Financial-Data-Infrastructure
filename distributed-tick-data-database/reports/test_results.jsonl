@@ -1,0 +1,76 @@
+{"Time":"2026-11-28T10:29:12.275224+05:30","Action":"start","Package":"distributed-tick-data-database/src/cmd/tickdb"}
+{"Time":"2026-11-28T10:29:12.275352+05:30","Action":"output","Package":"distributed-tick-data-database/src/cmd/tickdb","Output":"?   \tdistributed-tick-data-database/src/cmd/tickdb\t[no test files]\n"}
+{"Time":"2026-11-28T10:29:12.275367+05:30","Action":"skip","Package":"distributed-tick-data-database/src/cmd/tickdb","Elapsed":0}
+{"Time":"2026-11-28T10:29:12.275372+05:30","Action":"start","Package":"distributed-tick-data-database/src/codec"}
+{"Time":"2026-11-28T10:29:12.275393+05:30","Action":"output","Package":"distributed-tick-data-database/src/codec","Output":"?   \tdistributed-tick-data-database/src/codec\t[no test files]\n"}
+{"Time":"2026-11-28T10:29:12.275402+05:30","Action":"skip","Package":"distributed-tick-data-database/src/codec","Elapsed":0}
+{"Time":"2026-11-28T10:29:12.275428+05:30","Action":"start","Package":"distributed-tick-data-database/src/config"}
+{"Time":"2026-11-28T10:29:12.27544+05:30","Action":"output","Package":"distributed-tick-data-database/src/config","Output":"?   \tdistributed-tick-data-database/src/config\t[no test files]\n"}
+{"Time":"2026-11-28T10:29:12.275449+05:30","Action":"skip","Package":"distributed-tick-data-database/src/config","Elapsed":0}
+{"Time":"2026-11-28T10:29:12.27545+05:30","Action":"start","Package":"distributed-tick-data-database/src/domain"}
+{"Time":"2026-11-28T10:29:12.275461+05:30","Action":"output","Package":"distributed-tick-data-database/src/domain","Output":"?   \tdistributed-tick-data-database/src/domain\t[no test files]\n"}
+{"Time":"2026-11-28T10:29:12.275466+05:30","Action":"start","Package":"distributed-tick-data-database/src/ingest"}
+{"Time":"2026-11-28T10:29:12.275474+05:30","Action":"output","Package":"distributed-tick-data-database/src/ingest","Output":"?   \tdistributed-tick-data-database/src/ingest\t[no test files]\n"}
+{"Time":"2026-11-28T10:29:12.275478+05:30","Action":"skip","Package":"distributed-tick-data-database/src/ingest","Elapsed":0}
+{"Time":"2026-11-28T10:29:12.275466+05:30","Action":"skip","Package":"distributed-tick-data-database/src/domain","Elapsed":0}
+{"Time":"2026-11-28T10:29:12.275489+05:30","Action":"start","Package":"distributed-tick-data-database/src/query"}
+{"Time":"2026-11-28T10:29:12.27551+05:30","Action":"output","Package":"distributed-tick-data-database/src/query","Output":"?   \tdistributed-tick-data-database/src/query\t[no test files]\n"}
+{"Time":"2026-11-28T10:29:12.275525+05:30","Action":"skip","Package":"distributed-tick-data-database/src/query","Elapsed":0}
+{"Time":"2026-11-28T10:29:12.275519+05:30","Action":"start","Package":"distributed-tick-data-database/src/server"}
+{"Time":"2026-11-28T10:29:12.275535+05:30","Action":"output","Package":"distributed-tick-data-database/src/server","Output":"?   \tdistributed-tick-data-database/src/server\t[no test files]\n"}
+{"Time":"2026-11-28T10:29:12.27554+05:30","Action":"skip","Package":"distributed-tick-data-database/src/server","Elapsed":0}
+{"Time":"2026-11-28T10:29:12.275544+05:30","Action":"start","Package":"distributed-tick-data-database/src/storage"}
+{"Time":"2026-11-28T10:29:12.275549+05:30","Action":"output","Package":"distributed-tick-data-database/src/storage","Output":"?   \tdistributed-tick-data-database/src/storage\t[no test files]\n"}
+{"Time":"2026-11-28T10:29:12.275556+05:30","Action":"skip","Package":"distributed-tick-data-database/src/storage","Elapsed":0}
+{"Time":"2026-11-28T10:29:12.591662+05:30","Action":"start","Package":"distributed-tick-data-database/tests"}
+{"Time":"2026-11-28T10:29:13.038122+05:30","Action":"run","Package":"distributed-tick-data-database/tests","Test":"TestLargeRangeQueryGuardsAndBoundedPagination"}
+{"Time":"2026-11-28T10:29:13.038169+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestLargeRangeQueryGuardsAndBoundedPagination","Output":"=== RUN   TestLargeRangeQueryGuardsAndBoundedPagination\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.130221+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestLargeRangeQueryGuardsAndBoundedPagination","Output":"--- PASS: TestLargeRangeQueryGuardsAndBoundedPagination (0.09s)\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.130255+05:30","Action":"pass","Package":"distributed-tick-data-database/tests","Test":"TestLargeRangeQueryGuardsAndBoundedPagination","Elapsed":0.09}
+{"Time":"2026-11-28T10:29:13.130266+05:30","Action":"run","Package":"distributed-tick-data-database/tests","Test":"TestIngestionBackpressureRejectsExplicitlyWithZeroSilentLoss"}
+{"Time":"2026-11-28T10:29:13.130269+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestIngestionBackpressureRejectsExplicitlyWithZeroSilentLoss","Output":"=== RUN   TestIngestionBackpressureRejectsExplicitlyWithZeroSilentLoss\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.447417+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestIngestionBackpressureRejectsExplicitlyWithZeroSilentLoss","Output":"--- PASS: TestIngestionBackpressureRejectsExplicitlyWithZeroSilentLoss (0.32s)\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.447435+05:30","Action":"pass","Package":"distributed-tick-data-database/tests","Test":"TestIngestionBackpressureRejectsExplicitlyWithZeroSilentLoss","Elapsed":0.32}
+{"Time":"2026-11-28T10:29:13.447439+05:30","Action":"run","Package":"distributed-tick-data-database/tests","Test":"TestColumnarSegmentCodecRoundTripAndCorruptionDetection"}
+{"Time":"2026-11-28T10:29:13.447441+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestColumnarSegmentCodecRoundTripAndCorruptionDetection","Output":"=== RUN   TestColumnarSegmentCodecRoundTripAndCorruptionDetection\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.449736+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestColumnarSegmentCodecRoundTripAndCorruptionDetection","Output":"--- PASS: TestColumnarSegmentCodecRoundTripAndCorruptionDetection (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.449746+05:30","Action":"pass","Package":"distributed-tick-data-database/tests","Test":"TestColumnarSegmentCodecRoundTripAndCorruptionDetection","Elapsed":0}
+{"Time":"2026-11-28T10:29:13.449749+05:30","Action":"run","Package":"distributed-tick-data-database/tests","Test":"TestParquetCodecRoundTripAndMagicValidation"}
+{"Time":"2026-11-28T10:29:13.449754+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestParquetCodecRoundTripAndMagicValidation","Output":"=== RUN   TestParquetCodecRoundTripAndMagicValidation\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.452821+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestParquetCodecRoundTripAndMagicValidation","Output":"--- PASS: TestParquetCodecRoundTripAndMagicValidation (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.452827+05:30","Action":"pass","Package":"distributed-tick-data-database/tests","Test":"TestParquetCodecRoundTripAndMagicValidation","Elapsed":0}
+{"Time":"2026-11-28T10:29:13.45283+05:30","Action":"run","Package":"distributed-tick-data-database/tests","Test":"TestReferenceFixtureMatchesHandCalculatedOracle"}
+{"Time":"2026-11-28T10:29:13.452832+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestReferenceFixtureMatchesHandCalculatedOracle","Output":"=== RUN   TestReferenceFixtureMatchesHandCalculatedOracle\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.452977+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestReferenceFixtureMatchesHandCalculatedOracle","Output":"--- PASS: TestReferenceFixtureMatchesHandCalculatedOracle (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.452982+05:30","Action":"pass","Package":"distributed-tick-data-database/tests","Test":"TestReferenceFixtureMatchesHandCalculatedOracle","Elapsed":0}
+{"Time":"2026-11-28T10:29:13.452985+05:30","Action":"run","Package":"distributed-tick-data-database/tests","Test":"TestDuplicateSequenceAndConflictAndLateEventPolicies"}
+{"Time":"2026-11-28T10:29:13.45299+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestDuplicateSequenceAndConflictAndLateEventPolicies","Output":"=== RUN   TestDuplicateSequenceAndConflictAndLateEventPolicies\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.452994+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestDuplicateSequenceAndConflictAndLateEventPolicies","Output":"--- PASS: TestDuplicateSequenceAndConflictAndLateEventPolicies (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.453003+05:30","Action":"pass","Package":"distributed-tick-data-database/tests","Test":"TestDuplicateSequenceAndConflictAndLateEventPolicies","Elapsed":0}
+{"Time":"2026-11-28T10:29:13.453009+05:30","Action":"run","Package":"distributed-tick-data-database/tests","Test":"TestInvalidAndBoundaryFixtures"}
+{"Time":"2026-11-28T10:29:13.453011+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestInvalidAndBoundaryFixtures","Output":"=== RUN   TestInvalidAndBoundaryFixtures\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.453074+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestInvalidAndBoundaryFixtures","Output":"--- PASS: TestInvalidAndBoundaryFixtures (0.00s)\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.453078+05:30","Action":"pass","Package":"distributed-tick-data-database/tests","Test":"TestInvalidAndBoundaryFixtures","Elapsed":0}
+{"Time":"2026-11-28T10:29:13.453081+05:30","Action":"run","Package":"distributed-tick-data-database/tests","Test":"TestNodeRestartPreservesFlushedAndWALOnlyDataAndIdempotency"}
+{"Time":"2026-11-28T10:29:13.453269+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestNodeRestartPreservesFlushedAndWALOnlyDataAndIdempotency","Output":"=== RUN   TestNodeRestartPreservesFlushedAndWALOnlyDataAndIdempotency\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.66459+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestNodeRestartPreservesFlushedAndWALOnlyDataAndIdempotency","Output":"--- PASS: TestNodeRestartPreservesFlushedAndWALOnlyDataAndIdempotency (0.21s)\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.664606+05:30","Action":"pass","Package":"distributed-tick-data-database/tests","Test":"TestNodeRestartPreservesFlushedAndWALOnlyDataAndIdempotency","Elapsed":0.21}
+{"Time":"2026-11-28T10:29:13.664612+05:30","Action":"run","Package":"distributed-tick-data-database/tests","Test":"TestPartialBatchWriteRecoveryAndOrphanTempCleanup"}
+{"Time":"2026-11-28T10:29:13.664615+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestPartialBatchWriteRecoveryAndOrphanTempCleanup","Output":"=== RUN   TestPartialBatchWriteRecoveryAndOrphanTempCleanup\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.695652+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestPartialBatchWriteRecoveryAndOrphanTempCleanup","Output":"--- PASS: TestPartialBatchWriteRecoveryAndOrphanTempCleanup (0.03s)\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.695663+05:30","Action":"pass","Package":"distributed-tick-data-database/tests","Test":"TestPartialBatchWriteRecoveryAndOrphanTempCleanup","Elapsed":0.03}
+{"Time":"2026-11-28T10:29:13.695722+05:30","Action":"run","Package":"distributed-tick-data-database/tests","Test":"TestHTTPAPIAndClickHouseAdapterIntegration"}
+{"Time":"2026-11-28T10:29:13.695749+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestHTTPAPIAndClickHouseAdapterIntegration","Output":"=== RUN   TestHTTPAPIAndClickHouseAdapterIntegration\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.749256+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestHTTPAPIAndClickHouseAdapterIntegration","Output":"--- PASS: TestHTTPAPIAndClickHouseAdapterIntegration (0.05s)\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:13.749264+05:30","Action":"pass","Package":"distributed-tick-data-database/tests","Test":"TestHTTPAPIAndClickHouseAdapterIntegration","Elapsed":0.05}
+{"Time":"2026-11-28T10:29:13.74927+05:30","Action":"run","Package":"distributed-tick-data-database/tests","Test":"TestReproducibilityDeterministicAcrossCleanRunsAndFormats"}
+{"Time":"2026-11-28T10:29:13.749272+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestReproducibilityDeterministicAcrossCleanRunsAndFormats","Output":"=== RUN   TestReproducibilityDeterministicAcrossCleanRunsAndFormats\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:14.081279+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestReproducibilityDeterministicAcrossCleanRunsAndFormats","Output":"--- PASS: TestReproducibilityDeterministicAcrossCleanRunsAndFormats (0.33s)\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:14.081294+05:30","Action":"pass","Package":"distributed-tick-data-database/tests","Test":"TestReproducibilityDeterministicAcrossCleanRunsAndFormats","Elapsed":0.33}
+{"Time":"2026-11-28T10:29:14.081299+05:30","Action":"run","Package":"distributed-tick-data-database/tests","Test":"TestOperationalMissingConfigInvalidInputsAndRerunIdempotency"}
+{"Time":"2026-11-28T10:29:14.081302+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestOperationalMissingConfigInvalidInputsAndRerunIdempotency","Output":"=== RUN   TestOperationalMissingConfigInvalidInputsAndRerunIdempotency\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:14.137508+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Test":"TestOperationalMissingConfigInvalidInputsAndRerunIdempotency","Output":"--- PASS: TestOperationalMissingConfigInvalidInputsAndRerunIdempotency (0.06s)\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:14.137522+05:30","Action":"pass","Package":"distributed-tick-data-database/tests","Test":"TestOperationalMissingConfigInvalidInputsAndRerunIdempotency","Elapsed":0.06}
+{"Time":"2026-11-28T10:29:14.137526+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-28T10:29:14.138175+05:30","Action":"output","Package":"distributed-tick-data-database/tests","Output":"ok  \tdistributed-tick-data-database/tests\t1.546s\n"}
+{"Time":"2026-11-28T10:29:14.161497+05:30","Action":"pass","Package":"distributed-tick-data-database/tests","Elapsed":1.5699999999999998}

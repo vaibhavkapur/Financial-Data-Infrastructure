@@ -1,0 +1,240 @@
+{
+  "fixture_id": "corporate_actions_v1",
+  "description": "M3 deterministic corporate-action linkage fixture: ticker rename, merger to successor instrument, 2-for-1 split, and spinoff.",
+  "schema_version": "1.0.0",
+  "events": [
+    {
+      "event_type": "LISTING_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "VENDOR_ALPHA",
+      "source_event_id": "CA-LST-RENAME-1",
+      "valid_from": "2024-03-01T00:00:00Z",
+      "valid_to": "2024-06-01T00:00:00Z",
+      "observed_at": "2024-02-28T16:00:00Z",
+      "payload": {
+        "listing_id": "LST-D3524489BEEA",
+        "instrument_id": "SEC-4524211962DF",
+        "mic": "XNAS",
+        "ticker": "NVAX",
+        "currency": "USD",
+        "is_primary": true,
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "CORPORATE_ACTION_LINK",
+      "schema_version": "1.0.0",
+      "source_system": "CORP_ACTION_ENGINE",
+      "source_event_id": "CA-LINK-RENAME-1",
+      "valid_from": "2024-03-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-02-28T16:00:00Z",
+      "payload": {
+        "action_type": "TICKER_CHANGE",
+        "from_instrument_id": "SEC-4524211962DF",
+        "to_instrument_id": "SEC-4524211962DF",
+        "from_listing_id": "LST-D3524489BEEA",
+        "to_listing_id": "LST-D3524489BEEA",
+        "ratio": "1.0",
+        "metadata": {
+          "old_ticker": "NOVA",
+          "new_ticker": "NVAX"
+        }
+      }
+    },
+    {
+      "event_type": "INSTRUMENT_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "CA-INS-VERTEX",
+      "valid_from": "2024-06-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-05-30T12:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-8CD5A4F2A1D5",
+        "name": "Synthetic Vertex Merged Corp",
+        "asset_class": "EQUITY",
+        "issuer_name": "Synthetic Vertex Holdings",
+        "country_of_risk": "US",
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "LISTING_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "CA-LST-VERTEX",
+      "valid_from": "2024-06-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-05-30T12:00:00Z",
+      "payload": {
+        "listing_id": "LST-5465B5564FE5",
+        "instrument_id": "SEC-8CD5A4F2A1D5",
+        "mic": "XNAS",
+        "ticker": "VRTX",
+        "currency": "USD",
+        "is_primary": true,
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "CA-IDM-VERTEX-ISIN",
+      "valid_from": "2024-06-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-05-30T12:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-8CD5A4F2A1D5",
+        "listing_id": null,
+        "namespace": "ISIN",
+        "identifier_value": "US0000005050",
+        "mic": null
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "CA-IDM-VERTEX-FIGI",
+      "valid_from": "2024-06-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-05-30T12:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-8CD5A4F2A1D5",
+        "listing_id": null,
+        "namespace": "OPENFIGI",
+        "identifier_value": "BBG000SYN005",
+        "mic": null
+      }
+    },
+    {
+      "event_type": "CORPORATE_ACTION_LINK",
+      "schema_version": "1.0.0",
+      "source_system": "CORP_ACTION_ENGINE",
+      "source_event_id": "CA-LINK-MERGER-1",
+      "valid_from": "2024-06-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-05-30T12:00:00Z",
+      "payload": {
+        "action_type": "MERGER",
+        "from_instrument_id": "SEC-4524211962DF",
+        "to_instrument_id": "SEC-8CD5A4F2A1D5",
+        "from_listing_id": "LST-D3524489BEEA",
+        "to_listing_id": "LST-5465B5564FE5",
+        "ratio": "0.5",
+        "metadata": {
+          "deal_type": "STOCK_FOR_STOCK"
+        }
+      }
+    },
+    {
+      "event_type": "CORPORATE_ACTION_LINK",
+      "schema_version": "1.0.0",
+      "source_system": "CORP_ACTION_ENGINE",
+      "source_event_id": "CA-LINK-SPLIT-1",
+      "valid_from": "2024-09-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-08-25T12:00:00Z",
+      "payload": {
+        "action_type": "SPLIT",
+        "from_instrument_id": "SEC-8CD5A4F2A1D5",
+        "to_instrument_id": "SEC-8CD5A4F2A1D5",
+        "from_listing_id": "LST-5465B5564FE5",
+        "to_listing_id": "LST-5465B5564FE5",
+        "ratio": "2.0",
+        "metadata": {
+          "split_terms": "2-for-1"
+        }
+      }
+    },
+    {
+      "event_type": "INSTRUMENT_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "CA-INS-SPINOFF",
+      "valid_from": "2024-11-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-10-25T12:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-5A9FF3F0B3E4",
+        "name": "Synthetic Spinoff Co",
+        "asset_class": "EQUITY",
+        "issuer_name": "Synthetic Spinoff Holdings",
+        "country_of_risk": "US",
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "LISTING_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "CA-LST-SPINOFF",
+      "valid_from": "2024-11-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-10-25T12:00:00Z",
+      "payload": {
+        "listing_id": "LST-98CF43435987",
+        "instrument_id": "SEC-5A9FF3F0B3E4",
+        "mic": "XNYS",
+        "ticker": "SPCO",
+        "currency": "USD",
+        "is_primary": true,
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "CA-IDM-SPINOFF-ISIN",
+      "valid_from": "2024-11-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-10-25T12:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-5A9FF3F0B3E4",
+        "listing_id": null,
+        "namespace": "ISIN",
+        "identifier_value": "US0000006066",
+        "mic": null
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "CA-IDM-SPINOFF-FIGI",
+      "valid_from": "2024-11-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-10-25T12:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-5A9FF3F0B3E4",
+        "listing_id": null,
+        "namespace": "OPENFIGI",
+        "identifier_value": "BBG000SYN006",
+        "mic": null
+      }
+    },
+    {
+      "event_type": "CORPORATE_ACTION_LINK",
+      "schema_version": "1.0.0",
+      "source_system": "CORP_ACTION_ENGINE",
+      "source_event_id": "CA-LINK-SPINOFF-1",
+      "valid_from": "2024-11-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2024-10-25T12:00:00Z",
+      "payload": {
+        "action_type": "SPINOFF",
+        "from_instrument_id": "SEC-8CD5A4F2A1D5",
+        "to_instrument_id": "SEC-5A9FF3F0B3E4",
+        "from_listing_id": "LST-5465B5564FE5",
+        "to_listing_id": "LST-98CF43435987",
+        "ratio": "0.25",
+        "metadata": {
+          "distribution_basis": "1 share SPCO per 4 shares VRTX"
+        }
+      }
+    }
+  ]
+}

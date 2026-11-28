@@ -1,0 +1,352 @@
+{
+  "reference_fixture": {
+    "completeness": [
+      {
+        "source_id": "sim-feed-a",
+        "instrument_id": "AAPL",
+        "min_seq": 1,
+        "max_seq": 6,
+        "received_unique": 5,
+        "expected_span": 6,
+        "missing_sequences": 1,
+        "open_gap_intervals": 1,
+        "resolved_gaps_count": 1,
+        "duplicate_count": 1,
+        "late_accepted_count": 1,
+        "late_rejected_count": 0,
+        "completeness_ratio": 0.8333333333333334,
+        "max_event_time_ns": 1764324000000000000
+      },
+      {
+        "source_id": "sim-feed-a",
+        "instrument_id": "MSFT",
+        "min_seq": 1,
+        "max_seq": 4,
+        "received_unique": 4,
+        "expected_span": 4,
+        "missing_sequences": 0,
+        "open_gap_intervals": 0,
+        "resolved_gaps_count": 1,
+        "duplicate_count": 0,
+        "late_accepted_count": 1,
+        "late_rejected_count": 0,
+        "completeness_ratio": 1,
+        "max_event_time_ns": 1764320400600000000
+      }
+    ],
+    "engine_accepted": 9,
+    "engine_duplicates": 1,
+    "engine_late": 2,
+    "engine_sha256": "d6f207852f84d9fb2ea356ebd1dc4adad9c393cdf5f3b1d3db9158fea6918b9b",
+    "exact_match": true,
+    "fixture_path": "data/fixtures/valid_reference_ticks.jsonl",
+    "input_events": 10,
+    "open_gaps": [
+      {
+        "source_id": "sim-feed-a",
+        "instrument_id": "AAPL",
+        "start_seq": 4,
+        "end_seq": 4,
+        "missing_count": 1,
+        "detected_at_ns": 1764324001000000000
+      }
+    ],
+    "oracle_accepted": 9,
+    "oracle_sha256": "d6f207852f84d9fb2ea356ebd1dc4adad9c393cdf5f3b1d3db9158fea6918b9b"
+  },
+  "report_version": "1.0.0",
+  "runtime": {
+    "recorded_at_utc": "2026-11-28T05:01:29Z",
+    "go_version": "go1.27.1",
+    "goos": "darwin",
+    "goarch": "arm64",
+    "num_cpu": 10,
+    "topology": "single-node-multi-shard",
+    "node_id": "node-local-01",
+    "num_shards": 4,
+    "config_version": "1.0.0",
+    "seed": 42
+  },
+  "synthetic_demo_with_restart": {
+    "completeness": [
+      {
+        "source_id": "sim-feed-a",
+        "instrument_id": "AAPL",
+        "min_seq": 1,
+        "max_seq": 655,
+        "received_unique": 652,
+        "expected_span": 655,
+        "missing_sequences": 3,
+        "open_gap_intervals": 3,
+        "resolved_gaps_count": 20,
+        "duplicate_count": 15,
+        "late_accepted_count": 20,
+        "late_rejected_count": 0,
+        "completeness_ratio": 0.9954198473282443,
+        "max_event_time_ns": 1764320406237535909
+      },
+      {
+        "source_id": "sim-feed-a",
+        "instrument_id": "BTC-USD",
+        "min_seq": 1,
+        "max_seq": 615,
+        "received_unique": 614,
+        "expected_span": 615,
+        "missing_sequences": 1,
+        "open_gap_intervals": 1,
+        "resolved_gaps_count": 18,
+        "duplicate_count": 9,
+        "late_accepted_count": 18,
+        "late_rejected_count": 0,
+        "completeness_ratio": 0.9983739837398374,
+        "max_event_time_ns": 1764320406258440791
+      },
+      {
+        "source_id": "sim-feed-a",
+        "instrument_id": "ESZ6",
+        "min_seq": 1,
+        "max_seq": 559,
+        "received_unique": 558,
+        "expected_span": 559,
+        "missing_sequences": 1,
+        "open_gap_intervals": 1,
+        "resolved_gaps_count": 17,
+        "duplicate_count": 13,
+        "late_accepted_count": 17,
+        "late_rejected_count": 0,
+        "completeness_ratio": 0.998211091234347,
+        "max_event_time_ns": 1764320406238734800
+      },
+      {
+        "source_id": "sim-feed-a",
+        "instrument_id": "ETH-USD",
+        "min_seq": 1,
+        "max_seq": 598,
+        "received_unique": 596,
+        "expected_span": 598,
+        "missing_sequences": 2,
+        "open_gap_intervals": 2,
+        "resolved_gaps_count": 13,
+        "duplicate_count": 14,
+        "late_accepted_count": 13,
+        "late_rejected_count": 0,
+        "completeness_ratio": 0.9966555183946488,
+        "max_event_time_ns": 1764320406261027241
+      },
+      {
+        "source_id": "sim-feed-a",
+        "instrument_id": "EURUSD",
+        "min_seq": 1,
+        "max_seq": 639,
+        "received_unique": 636,
+        "expected_span": 639,
+        "missing_sequences": 3,
+        "open_gap_intervals": 3,
+        "resolved_gaps_count": 16,
+        "duplicate_count": 13,
+        "late_accepted_count": 16,
+        "late_rejected_count": 0,
+        "completeness_ratio": 0.9953051643192489,
+        "max_event_time_ns": 1764320406263671575
+      },
+      {
+        "source_id": "sim-feed-a",
+        "instrument_id": "MSFT",
+        "min_seq": 1,
+        "max_seq": 662,
+        "received_unique": 660,
+        "expected_span": 662,
+        "missing_sequences": 2,
+        "open_gap_intervals": 2,
+        "resolved_gaps_count": 19,
+        "duplicate_count": 16,
+        "late_accepted_count": 19,
+        "late_rejected_count": 0,
+        "completeness_ratio": 0.9969788519637462,
+        "max_event_time_ns": 1764320406259814640
+      },
+      {
+        "source_id": "sim-feed-a",
+        "instrument_id": "NVDA",
+        "min_seq": 1,
+        "max_seq": 629,
+        "received_unique": 623,
+        "expected_span": 629,
+        "missing_sequences": 6,
+        "open_gap_intervals": 6,
+        "resolved_gaps_count": 19,
+        "duplicate_count": 0,
+        "late_accepted_count": 19,
+        "late_rejected_count": 0,
+        "completeness_ratio": 0.9904610492845787,
+        "max_event_time_ns": 1764320406255716714
+      },
+      {
+        "source_id": "sim-feed-a",
+        "instrument_id": "SPY",
+        "min_seq": 1,
+        "max_seq": 665,
+        "received_unique": 661,
+        "expected_span": 665,
+        "missing_sequences": 4,
+        "open_gap_intervals": 4,
+        "resolved_gaps_count": 17,
+        "duplicate_count": 16,
+        "late_accepted_count": 17,
+        "late_rejected_count": 0,
+        "completeness_ratio": 0.9939849624060151,
+        "max_event_time_ns": 1764320406243949858
+      }
+    ],
+    "exact_match_all_formats": true,
+    "exports": {
+      "csv": {
+        "export_id": "exp-4938b10e822bb447",
+        "format": "csv",
+        "output_path": "/var/folders/g_/j9s29m557kb9v1v8llg48ht80000gn/T/tickdb-demo-3289104479/replay.csv",
+        "row_count": 5000,
+        "bytes_written": 1118218,
+        "logical_sha256": "27643523b420298cc0623dea739f8190642e28383c3d5120d5f63eb63dc9b9dc",
+        "file_sha256": "4b84fac9b42737cf170a0e07abdea22a140892c8ccc4a6785bfbb60523a5d781",
+        "duration_ms": 6.063
+      },
+      "jsonl": {
+        "export_id": "exp-2dabdd074f22b0b0",
+        "format": "jsonl",
+        "output_path": "/var/folders/g_/j9s29m557kb9v1v8llg48ht80000gn/T/tickdb-demo-3289104479/replay.jsonl",
+        "row_count": 5000,
+        "bytes_written": 2677966,
+        "logical_sha256": "27643523b420298cc0623dea739f8190642e28383c3d5120d5f63eb63dc9b9dc",
+        "file_sha256": "0b6f264f64cf37bb1432ac8bfef30f5a925734a1ed9be4251be8dffc36b0ebd9",
+        "duration_ms": 9.302
+      },
+      "parquet": {
+        "export_id": "exp-a65a6c6b2715c7b3",
+        "format": "parquet",
+        "output_path": "/var/folders/g_/j9s29m557kb9v1v8llg48ht80000gn/T/tickdb-demo-3289104479/replay.parquet",
+        "row_count": 5000,
+        "bytes_written": 140117,
+        "logical_sha256": "27643523b420298cc0623dea739f8190642e28383c3d5120d5f63eb63dc9b9dc",
+        "file_sha256": "ae5f6e1912cc5ab30a2bf0b1e3edea9c41b575e2d0d62dee17a806ff26372d66",
+        "duration_ms": 7.776
+      }
+    },
+    "open_gap_count": 22,
+    "oracle_sha256": "27643523b420298cc0623dea739f8190642e28383c3d5120d5f63eb63dc9b9dc",
+    "oracle_unique_rows": 5000,
+    "parquet_roundtrip_sha256": "27643523b420298cc0623dea739f8190642e28383c3d5120d5f63eb63dc9b9dc",
+    "raw_input_events": 5136,
+    "recovery_reports": [
+      {
+        "shard_id": 0,
+        "wal_stats": {
+          "frames_recovered": 0,
+          "events_recovered": 0,
+          "corrupt_tail_detected": false,
+          "truncated_corrupt_bytes": 0,
+          "valid_end_offset": 0
+        },
+        "applied_wal_frames": 0,
+        "applied_wal_events": 0,
+        "orphaned_temp_files_cleaned": 0,
+        "segments_loaded": 0,
+        "recovery_duration_ms": 0.17
+      },
+      {
+        "shard_id": 1,
+        "wal_stats": {
+          "frames_recovered": 3,
+          "events_recovered": 696,
+          "corrupt_tail_detected": false,
+          "truncated_corrupt_bytes": 0,
+          "valid_end_offset": 121671
+        },
+        "applied_wal_frames": 3,
+        "applied_wal_events": 696,
+        "orphaned_temp_files_cleaned": 0,
+        "segments_loaded": 2,
+        "recovery_duration_ms": 1.108
+      },
+      {
+        "shard_id": 2,
+        "wal_stats": {
+          "frames_recovered": 11,
+          "events_recovered": 623,
+          "corrupt_tail_detected": false,
+          "truncated_corrupt_bytes": 0,
+          "valid_end_offset": 107695
+        },
+        "applied_wal_frames": 11,
+        "applied_wal_events": 623,
+        "orphaned_temp_files_cleaned": 0,
+        "segments_loaded": 0,
+        "recovery_duration_ms": 0.93
+      },
+      {
+        "shard_id": 3,
+        "wal_stats": {
+          "frames_recovered": 3,
+          "events_recovered": 274,
+          "corrupt_tail_detected": false,
+          "truncated_corrupt_bytes": 0,
+          "valid_end_offset": 47275
+        },
+        "applied_wal_frames": 3,
+        "applied_wal_events": 274,
+        "orphaned_temp_files_cleaned": 0,
+        "segments_loaded": 1,
+        "recovery_duration_ms": 0.574
+      }
+    ],
+    "storage_stats": {
+      "node_id": "node-local-01",
+      "topology": "single-node-multi-shard",
+      "num_shards": 4,
+      "total_segments": 3,
+      "total_segment_bytes": 80789,
+      "total_uncompressed_col_bytes": 154260,
+      "total_wal_bytes": 276641,
+      "total_memtable_events": 1593,
+      "total_persisted_rows": 3407,
+      "total_disk_bytes": 357430,
+      "shards": [
+        {
+          "shard_id": 0,
+          "segment_count": 0,
+          "segment_bytes": 0,
+          "uncompressed_col_bytes": 0,
+          "wal_bytes": 0,
+          "memtable_events": 0,
+          "persisted_segment_rows": 0
+        },
+        {
+          "shard_id": 1,
+          "segment_count": 2,
+          "segment_bytes": 60646,
+          "uncompressed_col_bytes": 110977,
+          "wal_bytes": 121671,
+          "memtable_events": 696,
+          "persisted_segment_rows": 2369
+        },
+        {
+          "shard_id": 2,
+          "segment_count": 0,
+          "segment_bytes": 0,
+          "uncompressed_col_bytes": 0,
+          "wal_bytes": 107695,
+          "memtable_events": 623,
+          "persisted_segment_rows": 0
+        },
+        {
+          "shard_id": 3,
+          "segment_count": 1,
+          "segment_bytes": 20143,
+          "uncompressed_col_bytes": 43283,
+          "wal_bytes": 47275,
+          "memtable_events": 274,
+          "persisted_segment_rows": 1038
+        }
+      ]
+    }
+  }
+}

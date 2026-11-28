@@ -1,0 +1,8 @@
+# Pinned dependency manifest for distributed-quant-research-platform
+# Core runtime: Python >= 3.9 standard library only (zero required third-party packages).
+# Optional adapters (uncomment / install via pip extras when running optional backends):
+#   pip install -e ".[parquet]"   -> pyarrow==20.0.0 (Apache-2.0)
+#   pip install -e ".[dask]"      -> dask==2025.2.0, distributed==2025.2.0 (BSD-3-Clause)
+#   pip install -e ".[ray]"       -> ray==2.43.0 (Apache-2.0)
+#   pip install -e ".[postgres]"  -> psycopg[binary]==3.2.6 (LGPL-3.0)
+#   pip install -e ".[dev]"       -> pytest==8.3.5 (MIT)

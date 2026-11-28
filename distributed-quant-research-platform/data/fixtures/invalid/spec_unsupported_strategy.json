@@ -1,0 +1,17 @@
+{
+  "schema_version": "dqrp.v1",
+  "experiment_id": "exp-invalid-strategy",
+  "name": "Invalid Strategy Spec",
+  "dataset_manifest_path": "../oracle/manifest.json",
+  "strategy_name": "quantum_magic_alpha",
+  "base_seed": 42,
+  "parameter_grid": {
+    "symbol": [
+      "ORACLE"
+    ]
+  },
+  "budget": {
+    "max_trials": 1,
+    "max_concurrency": 1
+  }
+}

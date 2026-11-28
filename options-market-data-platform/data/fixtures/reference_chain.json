@@ -1,0 +1,269 @@
+{
+  "bundle_name": "reference_chain_v1",
+  "schema_version": "1.0.0",
+  "provenance_note": "100% synthetic educational/research fixture generated from analytical Black-Scholes-Merton formulas; no live market or proprietary data.",
+  "contracts": [
+    {
+      "option_id": "OPT:SYNTH:20270619:C:90.0000",
+      "contract_version": 1,
+      "underlying_symbol": "SYNTH",
+      "expiry_date": "2027-06-19",
+      "option_right": "C",
+      "strike": "90.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "EUROPEAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-19T19:00:00Z"
+    },
+    {
+      "option_id": "OPT:SYNTH:20270619:P:90.0000",
+      "contract_version": 1,
+      "underlying_symbol": "SYNTH",
+      "expiry_date": "2027-06-19",
+      "option_right": "P",
+      "strike": "90.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "EUROPEAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-19T19:00:00Z"
+    },
+    {
+      "option_id": "OPT:SYNTH:20270619:C:100.0000",
+      "contract_version": 1,
+      "underlying_symbol": "SYNTH",
+      "expiry_date": "2027-06-19",
+      "option_right": "C",
+      "strike": "100.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "EUROPEAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-19T19:00:00Z"
+    },
+    {
+      "option_id": "OPT:SYNTH:20270619:P:100.0000",
+      "contract_version": 1,
+      "underlying_symbol": "SYNTH",
+      "expiry_date": "2027-06-19",
+      "option_right": "P",
+      "strike": "100.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "EUROPEAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-19T19:00:00Z"
+    },
+    {
+      "option_id": "OPT:SYNTH:20270619:C:110.0000",
+      "contract_version": 1,
+      "underlying_symbol": "SYNTH",
+      "expiry_date": "2027-06-19",
+      "option_right": "C",
+      "strike": "110.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "EUROPEAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-19T19:00:00Z"
+    },
+    {
+      "option_id": "OPT:SYNTH:20270619:P:110.0000",
+      "contract_version": 1,
+      "underlying_symbol": "SYNTH",
+      "expiry_date": "2027-06-19",
+      "option_right": "P",
+      "strike": "110.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "EUROPEAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-19T19:00:00Z"
+    }
+  ],
+  "calendars": [
+    {
+      "calendar_id": "US_OPT_SYNTH",
+      "calendar_version": 1,
+      "expiry_date": "2027-06-19",
+      "expiry_timestamp_utc": "2027-06-19T20:00:00Z",
+      "is_trading_day": true,
+      "settlement_type": "PM",
+      "source_id": "synthetic_calendar",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "rate_curves": [
+    {
+      "curve_id": "USD_OIS_SYNTH",
+      "curve_version": 1,
+      "as_of_time": "2026-06-19T19:30:00Z",
+      "tenor_days": 90,
+      "risk_free_rate": 0.05,
+      "dividend_yield": 0.01,
+      "source_id": "synthetic_rates",
+      "schema_version": "1.0.0"
+    },
+    {
+      "curve_id": "USD_OIS_SYNTH",
+      "curve_version": 1,
+      "as_of_time": "2026-06-19T19:30:00Z",
+      "tenor_days": 365,
+      "risk_free_rate": 0.05,
+      "dividend_yield": 0.01,
+      "source_id": "synthetic_rates",
+      "schema_version": "1.0.0"
+    },
+    {
+      "curve_id": "USD_OIS_SYNTH",
+      "curve_version": 1,
+      "as_of_time": "2026-06-19T19:30:00Z",
+      "tenor_days": 730,
+      "risk_free_rate": 0.05,
+      "dividend_yield": 0.01,
+      "source_id": "synthetic_rates",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "underlying_quotes": [
+    {
+      "underlying_symbol": "SYNTH",
+      "quote_version": 1,
+      "event_time": "2026-06-19T19:59:55Z",
+      "ingestion_time": "2026-06-19T19:59:56Z",
+      "bid": "99.95",
+      "ask": "100.05",
+      "last_price": "100.00",
+      "source_id": "synthetic_nbbo",
+      "source_sequence": 1001,
+      "schema_version": "1.0.0"
+    }
+  ],
+  "snapshots": [
+    {
+      "snapshot_id": "SYNTH-20260619T200000Z",
+      "underlying_symbol": "SYNTH",
+      "snapshot_time": "2026-06-19T20:00:00Z",
+      "ingestion_time": "2026-06-19T20:00:02Z",
+      "source_id": "synthetic_opra_feed",
+      "schema_version": "1.0.0",
+      "quotes": [
+        {
+          "option_id": "OPT:SYNTH:20270619:C:90.0000",
+          "quote_version": 1,
+          "underlying_symbol": "SYNTH",
+          "reported_strike": "90.00",
+          "event_time": "2026-06-19T19:59:58Z",
+          "ingestion_time": "2026-06-19T20:00:00Z",
+          "bid": "17.328370",
+          "ask": "17.428370",
+          "bid_size": 50,
+          "ask_size": 45,
+          "source_id": "synthetic_opra_feed",
+          "source_sequence": 5001,
+          "schema_version": "1.0.0"
+        },
+        {
+          "option_id": "OPT:SYNTH:20270619:P:90.0000",
+          "quote_version": 1,
+          "underlying_symbol": "SYNTH",
+          "reported_strike": "90.00",
+          "event_time": "2026-06-19T19:59:58Z",
+          "ingestion_time": "2026-06-19T20:00:00Z",
+          "bid": "3.934035",
+          "ask": "4.034035",
+          "bid_size": 60,
+          "ask_size": 55,
+          "source_id": "synthetic_opra_feed",
+          "source_sequence": 5002,
+          "schema_version": "1.0.0"
+        },
+        {
+          "option_id": "OPT:SYNTH:20270619:C:100.0000",
+          "quote_version": 1,
+          "underlying_symbol": "SYNTH",
+          "reported_strike": "100.00",
+          "event_time": "2026-06-19T19:59:59Z",
+          "ingestion_time": "2026-06-19T20:00:01Z",
+          "bid": "9.776298",
+          "ask": "9.876298",
+          "bid_size": 100,
+          "ask_size": 100,
+          "source_id": "synthetic_opra_feed",
+          "source_sequence": 5003,
+          "schema_version": "1.0.0"
+        },
+        {
+          "option_id": "OPT:SYNTH:20270619:P:100.0000",
+          "quote_version": 1,
+          "underlying_symbol": "SYNTH",
+          "reported_strike": "100.00",
+          "event_time": "2026-06-19T19:59:59Z",
+          "ingestion_time": "2026-06-19T20:00:01Z",
+          "bid": "5.894257",
+          "ask": "5.994257",
+          "bid_size": 95,
+          "ask_size": 90,
+          "source_id": "synthetic_opra_feed",
+          "source_sequence": 5004,
+          "schema_version": "1.0.0"
+        },
+        {
+          "option_id": "OPT:SYNTH:20270619:C:110.0000",
+          "quote_version": 1,
+          "underlying_symbol": "SYNTH",
+          "reported_strike": "110.00",
+          "event_time": "2026-06-19T19:59:59Z",
+          "ingestion_time": "2026-06-19T20:00:01Z",
+          "bid": "6.332522",
+          "ask": "6.432522",
+          "bid_size": 80,
+          "ask_size": 75,
+          "source_id": "synthetic_opra_feed",
+          "source_sequence": 5005,
+          "schema_version": "1.0.0"
+        },
+        {
+          "option_id": "OPT:SYNTH:20270619:P:110.0000",
+          "quote_version": 1,
+          "underlying_symbol": "SYNTH",
+          "reported_strike": "110.00",
+          "event_time": "2026-06-19T19:59:59Z",
+          "ingestion_time": "2026-06-19T20:00:01Z",
+          "bid": "11.962776",
+          "ask": "12.062776",
+          "bid_size": 70,
+          "ask_size": 65,
+          "source_id": "synthetic_opra_feed",
+          "source_sequence": 5006,
+          "schema_version": "1.0.0"
+        }
+      ]
+    }
+  ],
+  "expected_oracle": {
+    "iv_tolerance": 1e-6,
+    "tte_tolerance": 1e-9,
+    "contracts": {
+      "OPT:SYNTH:20270619:C:90.0000": {"implied_vol": 0.25, "time_to_expiry_years": 1.0, "spot_moneyness": 1.1111111111},
+      "OPT:SYNTH:20270619:P:90.0000": {"implied_vol": 0.25, "time_to_expiry_years": 1.0, "spot_moneyness": 1.1111111111},
+      "OPT:SYNTH:20270619:C:100.0000": {"implied_vol": 0.20, "time_to_expiry_years": 1.0, "spot_moneyness": 1.0},
+      "OPT:SYNTH:20270619:P:100.0000": {"implied_vol": 0.20, "time_to_expiry_years": 1.0, "spot_moneyness": 1.0},
+      "OPT:SYNTH:20270619:C:110.0000": {"implied_vol": 0.22, "time_to_expiry_years": 1.0, "spot_moneyness": 0.9090909091},
+      "OPT:SYNTH:20270619:P:110.0000": {"implied_vol": 0.22, "time_to_expiry_years": 1.0, "spot_moneyness": 0.9090909091}
+    }
+  }
+}

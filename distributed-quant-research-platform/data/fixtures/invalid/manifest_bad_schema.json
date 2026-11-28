@@ -1,0 +1,14 @@
+{
+  "schema_version": "dqrp.v99",
+  "dataset_id": "bad-schema",
+  "version": "1.0.0",
+  "format": "jsonl",
+  "source_name": "synthetic",
+  "source_lineage": "test",
+  "created_at": "2025-01-01T00:00:00Z",
+  "expected_row_count": 1,
+  "symbols": [
+    "SYM_A"
+  ],
+  "partitions": []
+}

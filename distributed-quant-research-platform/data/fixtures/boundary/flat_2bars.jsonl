@@ -1,0 +1,2 @@
+{"availability_time": "2025-01-02T21:00:00Z", "close": 100.0, "event_time": "2025-01-02T21:00:00Z", "high": 100.0, "low": 100.0, "open": 100.0, "schema_version": "dqrp.v1", "source": "synthetic-boundary", "symbol": "FLAT", "volume": 0.0}
+{"availability_time": "2025-01-03T21:00:00Z", "close": 100.0, "event_time": "2025-01-03T21:00:00Z", "high": 100.0, "low": 100.0, "open": 100.0, "schema_version": "dqrp.v1", "source": "synthetic-boundary", "symbol": "FLAT", "volume": 0.0}

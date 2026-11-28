@@ -1,0 +1,226 @@
+{
+  "fixture_id": "ticker_reuse_dual_listing_v1",
+  "description": "M2 deterministic scenarios covering (1) ticker reuse across non-overlapping valid periods and (2) dual listing of one canonical instrument on XNYS (USD) and XLON (GBP).",
+  "schema_version": "1.0.0",
+  "events": [
+    {
+      "event_type": "INSTRUMENT_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "TR-INS-001",
+      "valid_from": "2018-01-01T00:00:00Z",
+      "valid_to": "2022-07-01T00:00:00Z",
+      "observed_at": "2018-01-01T06:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-E19954A68605",
+        "name": "Synthetic Acme Legacy Corp",
+        "asset_class": "EQUITY",
+        "issuer_name": "Synthetic Acme Legacy Holdings",
+        "country_of_risk": "US",
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "LISTING_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "TR-LST-001",
+      "valid_from": "2018-01-01T00:00:00Z",
+      "valid_to": "2022-07-01T00:00:00Z",
+      "observed_at": "2018-01-01T06:00:00Z",
+      "payload": {
+        "listing_id": "LST-19D2D62E8597",
+        "instrument_id": "SEC-E19954A68605",
+        "mic": "XNYS",
+        "ticker": "ACME",
+        "currency": "USD",
+        "is_primary": true,
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "TR-IDM-001",
+      "valid_from": "2018-01-01T00:00:00Z",
+      "valid_to": "2022-07-01T00:00:00Z",
+      "observed_at": "2018-01-01T06:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-E19954A68605",
+        "listing_id": null,
+        "namespace": "ISIN",
+        "identifier_value": "US0000001018",
+        "mic": null
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "TR-IDM-002",
+      "valid_from": "2018-01-01T00:00:00Z",
+      "valid_to": "2022-07-01T00:00:00Z",
+      "observed_at": "2018-01-01T06:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-E19954A68605",
+        "listing_id": null,
+        "namespace": "OPENFIGI",
+        "identifier_value": "BBG000SYN001",
+        "mic": null
+      }
+    },
+    {
+      "event_type": "INSTRUMENT_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "TR-INS-002",
+      "valid_from": "2023-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2023-01-01T06:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-B12CCB780542",
+        "name": "Synthetic Acme Robotics Inc",
+        "asset_class": "EQUITY",
+        "issuer_name": "Synthetic Acme Robotics Group",
+        "country_of_risk": "US",
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "LISTING_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "TR-LST-002",
+      "valid_from": "2023-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2023-01-01T06:00:00Z",
+      "payload": {
+        "listing_id": "LST-4795D4729D86",
+        "instrument_id": "SEC-B12CCB780542",
+        "mic": "XNYS",
+        "ticker": "ACME",
+        "currency": "USD",
+        "is_primary": true,
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "TR-IDM-003",
+      "valid_from": "2023-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2023-01-01T06:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-B12CCB780542",
+        "listing_id": null,
+        "namespace": "ISIN",
+        "identifier_value": "US0000002024",
+        "mic": null
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "TR-IDM-004",
+      "valid_from": "2023-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2023-01-01T06:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-B12CCB780542",
+        "listing_id": null,
+        "namespace": "OPENFIGI",
+        "identifier_value": "BBG000SYN002",
+        "mic": null
+      }
+    },
+    {
+      "event_type": "INSTRUMENT_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "DL-INS-001",
+      "valid_from": "2021-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2021-01-01T07:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-0C62E574E753",
+        "name": "Synthetic Orion Dual Corp",
+        "asset_class": "EQUITY",
+        "issuer_name": "Synthetic Orion International PLC",
+        "country_of_risk": "GB",
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "LISTING_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "DL-LST-XNYS",
+      "valid_from": "2021-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2021-01-01T07:00:00Z",
+      "payload": {
+        "listing_id": "LST-40BDA666A992",
+        "instrument_id": "SEC-0C62E574E753",
+        "mic": "XNYS",
+        "ticker": "ORION",
+        "currency": "USD",
+        "is_primary": true,
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "LISTING_UPSERT",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "DL-LST-XLON",
+      "valid_from": "2021-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2021-01-01T07:00:00Z",
+      "payload": {
+        "listing_id": "LST-0D1190BD20E4",
+        "instrument_id": "SEC-0C62E574E753",
+        "mic": "XLON",
+        "ticker": "ORION",
+        "currency": "GBP",
+        "is_primary": false,
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "DL-IDM-001",
+      "valid_from": "2021-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2021-01-01T07:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-0C62E574E753",
+        "listing_id": null,
+        "namespace": "ISIN",
+        "identifier_value": "US0000003030",
+        "mic": null
+      }
+    },
+    {
+      "event_type": "IDENTIFIER_MAP",
+      "schema_version": "1.0.0",
+      "source_system": "EXCHANGE_OFFICIAL",
+      "source_event_id": "DL-IDM-002",
+      "valid_from": "2021-01-01T00:00:00Z",
+      "valid_to": null,
+      "observed_at": "2021-01-01T07:00:00Z",
+      "payload": {
+        "instrument_id": "SEC-0C62E574E753",
+        "listing_id": null,
+        "namespace": "OPENFIGI",
+        "identifier_value": "BBG000SYN003",
+        "mic": null
+      }
+    }
+  ]
+}

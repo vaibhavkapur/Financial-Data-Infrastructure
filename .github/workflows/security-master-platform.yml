@@ -1,0 +1,56 @@
+name: Security Master Platform CI
+
+on:
+  push:
+    paths:
+      - "security-master-platform/**"
+      - ".github/workflows/security-master-platform.yml"
+  pull_request:
+    paths:
+      - "security-master-platform/**"
+      - ".github/workflows/security-master-platform.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: security-master-platform
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.11", "3.12"]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Verify project setup
+        run: make setup
+
+      - name: Run unit, integration, boundary, and API tests
+        run: PYTHONPATH=src python3 scripts/run_validation_report.py
+
+      - name: Run reproducible end-to-end demo
+        run: make demo
+
+      - name: Run deterministic synthetic benchmark
+        run: make benchmark
+
+      - name: Verify deterministic demo snapshot hash
+        run: |
+          python3 -c "
+          import json
+          report = json.load(open('reports/demo_baseline.json'))
+          assert report['reproducibility']['exact_match'] is True
+          assert report['quality_metrics']['lineage_coverage_ratio'] == 1.0
+          assert report['quality_metrics']['open_conflicts'] == 0
+          print('Verified snapshot hash:', report['reproducibility']['pre_replay_snapshot_hash'])
+          "

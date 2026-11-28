@@ -1,0 +1,53 @@
+{
+  "config_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "environment": "prototype-offline",
+  "storage": {
+    "backend": "sqlite",
+    "sqlite_path": ".runtime/security_master.db",
+    "postgres_dsn": null
+  },
+  "licensing": {
+    "licensed_namespaces": [
+      "OPENFIGI",
+      "COMPOSITE_FIGI",
+      "ISIN",
+      "LEI",
+      "MIC_TICKER",
+      "TICKER",
+      "VENDOR_INTERNAL"
+    ],
+    "restricted_namespaces": [
+      "CUSIP",
+      "SEDOL"
+    ],
+    "enforce_licensing": true
+  },
+  "conflict_resolution": {
+    "policy": "quarantine_all",
+    "allow_same_source_correction": true,
+    "block_lookup_on_open_conflict": true,
+    "source_priority": {
+      "EXCHANGE_OFFICIAL": 100,
+      "REGULATORY_FILING": 95,
+      "VENDOR_ALPHA": 80,
+      "VENDOR_BETA": 80,
+      "REVIEWER_WORKFLOW": 110
+    }
+  },
+  "quality": {
+    "required_instrument_namespaces": [
+      "OPENFIGI",
+      "ISIN"
+    ],
+    "max_freshness_lag_seconds": 86400
+  },
+  "reproducibility": {
+    "deterministic_seed": 20260101,
+    "default_timezone": "UTC"
+  },
+  "http": {
+    "host": "127.0.0.1",
+    "port": 8080
+  }
+}

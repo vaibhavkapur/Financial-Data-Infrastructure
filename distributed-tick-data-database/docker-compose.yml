@@ -1,0 +1,37 @@
+services:
+  clickhouse-shard-1:
+    image: clickhouse/clickhouse-server:24.8-alpine
+    container_name: tickdb-ch-shard-1
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    environment:
+      CLICKHOUSE_DB: tickdb
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: "1"
+    volumes:
+      - ./config/clickhouse/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - ch_shard1_data:/var/lib/clickhouse
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8123/ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  tickdb-node-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tickdb-node-1
+    ports:
+      - "8081:8081"
+    command: ["serve", "--config", "/etc/tickdb/default.json", "--listen", ":8081"]
+    volumes:
+      - ./config/default.json:/etc/tickdb/default.json:ro
+      - tickdb_node1_data:/var/lib/tickdb
+    depends_on:
+      clickhouse-shard-1:
+        condition: service_healthy
+
+volumes:
+  ch_shard1_data:
+  tickdb_node1_data:

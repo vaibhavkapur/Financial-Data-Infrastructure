@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "financial-corporate-actions-engine"
+version = "1.0.0"
+description = "Point-in-time bi-temporal financial corporate actions engine with exact Decimal arithmetic"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Trading Data Infrastructure Contributors" }
+]
+dependencies = []
+
+[project.optional-dependencies]
+polars = ["polars>=1.0.0,<2.0.0"]
+postgres = ["psycopg[binary]>=3.1.0,<4.0.0"]
+dev = [
+    "pytest>=8.0.0,<9.0.0",
+    "ruff>=0.6.0,<1.0.0",
+    "mypy>=1.11.0,<2.0.0",
+]
+
+[project.scripts]
+corp-actions = "corp_actions.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-v"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+mypy_path = "src"

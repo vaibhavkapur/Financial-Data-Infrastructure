@@ -1,0 +1,61 @@
+{
+  "fixture_id": "reference_minimal_v1",
+  "oracle_method": "Hand-calculated bitemporal expectation for reference_minimal.json",
+  "expected_counts": {
+    "active_instruments": 1,
+    "active_listings": 1,
+    "open_conflicts": 0,
+    "completeness_ratio": 1.0,
+    "lineage_coverage_ratio": 1.0
+  },
+  "expected_lookups": [
+    {
+      "query": {
+        "namespace": "MIC_TICKER",
+        "value": "XNYS:ACME",
+        "as_of_valid": "2020-06-01T00:00:00Z",
+        "as_of_observed": "2020-06-01T00:00:00Z"
+      },
+      "expect_status": "OK",
+      "expected_instrument_id": "SEC-E19954A68605",
+      "expected_listing_id": "LST-19D2D62E8597",
+      "expected_name": "Synthetic Acme Legacy Corp",
+      "expected_currency": "USD",
+      "expected_isin": "US0000001018",
+      "expected_openfigi": "BBG000SYN001"
+    },
+    {
+      "query": {
+        "namespace": "ISIN",
+        "value": "US0000001018",
+        "as_of_valid": "2020-06-01T00:00:00Z",
+        "as_of_observed": "2020-06-01T00:00:00Z"
+      },
+      "expect_status": "OK",
+      "expected_instrument_id": "SEC-E19954A68605",
+      "expected_listing_id": "LST-19D2D62E8597",
+      "expected_name": "Synthetic Acme Legacy Corp",
+      "expected_currency": "USD"
+    },
+    {
+      "query": {
+        "namespace": "MIC_TICKER",
+        "value": "XNYS:ACME",
+        "as_of_valid": "2020-06-01T00:00:00Z",
+        "as_of_observed": "2020-01-01T07:59:59Z"
+      },
+      "expect_status": "ERROR",
+      "expected_error_code": "PRE_OBSERVATION_LOOKUP"
+    },
+    {
+      "query": {
+        "namespace": "MIC_TICKER",
+        "value": "XNYS:ACME",
+        "as_of_valid": "2019-12-31T23:59:59Z",
+        "as_of_observed": "2020-06-01T00:00:00Z"
+      },
+      "expect_status": "ERROR",
+      "expected_error_code": "NOT_FOUND"
+    }
+  ]
+}

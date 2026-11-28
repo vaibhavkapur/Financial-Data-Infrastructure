@@ -1,0 +1,28 @@
+{
+  "dataset_sha256": "0231aa7eedfcd3d661e5d94d91e130f752a5f399d37a4b671e6d54120cd7a480",
+  "description": "Independent analytical hand-calculated oracle for sma_crossover(fast=2, slow=3, fee_bps=10)",
+  "expected_metrics": {
+    "annualized_return": -0.9547176949,
+    "annualized_volatility": 0.5193141871,
+    "bars_evaluated": 6,
+    "final_equity": 9404.41780842,
+    "max_drawdown": 0.0763962264,
+    "sharpe_ratio": -5.652344743,
+    "total_return": -0.0595582192,
+    "trade_count": 2,
+    "turnover": 2.0,
+    "win_rate": 0.3333333333
+  },
+  "params": {
+    "allow_short": false,
+    "bootstrap_draws": 0,
+    "fast_window": 2,
+    "fee_bps": 10.0,
+    "initial_capital": 10000.0,
+    "slippage_bps": 0.0,
+    "slow_window": 3,
+    "symbol": "ORACLE"
+  },
+  "strategy_name": "sma_crossover",
+  "tolerance": 1e-08
+}

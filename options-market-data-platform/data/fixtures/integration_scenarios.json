@@ -1,0 +1,172 @@
+{
+  "bundle_name": "integration_scenarios_v1",
+  "schema_version": "1.0.0",
+  "provenance_note": "Synthetic integration fixture testing missing underlying, delayed quotes, stale quotes, and versioned quote revisions.",
+  "contracts": [
+    {
+      "option_id": "OPT:NOUND:20270619:C:100.0000",
+      "contract_version": 1,
+      "underlying_symbol": "NOUND",
+      "expiry_date": "2027-06-19",
+      "option_right": "C",
+      "strike": "100.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "EUROPEAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-19T19:00:00Z"
+    },
+    {
+      "option_id": "OPT:DELAY:20270619:C:100.0000",
+      "contract_version": 1,
+      "underlying_symbol": "DELAY",
+      "expiry_date": "2027-06-19",
+      "option_right": "C",
+      "strike": "100.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "EUROPEAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-19T19:00:00Z"
+    },
+    {
+      "option_id": "OPT:DELAY:20270619:P:100.0000",
+      "contract_version": 1,
+      "underlying_symbol": "DELAY",
+      "expiry_date": "2027-06-19",
+      "option_right": "P",
+      "strike": "100.00",
+      "strike_scale_decimals": 2,
+      "contract_multiplier": 100,
+      "exercise_style": "EUROPEAN",
+      "currency": "USD",
+      "source_id": "synthetic_ref_master",
+      "schema_version": "1.0.0",
+      "ingestion_time": "2026-06-19T19:00:00Z"
+    }
+  ],
+  "calendars": [
+    {
+      "calendar_id": "US_OPT_SYNTH",
+      "calendar_version": 1,
+      "expiry_date": "2027-06-19",
+      "expiry_timestamp_utc": "2027-06-19T20:00:00Z",
+      "is_trading_day": true,
+      "settlement_type": "PM",
+      "source_id": "synthetic_calendar",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "rate_curves": [
+    {
+      "curve_id": "USD_OIS_INT",
+      "curve_version": 1,
+      "as_of_time": "2026-06-19T19:00:00Z",
+      "tenor_days": 365,
+      "risk_free_rate": 0.05,
+      "dividend_yield": 0.00,
+      "source_id": "synthetic_rates",
+      "schema_version": "1.0.0"
+    }
+  ],
+  "underlying_quotes": [
+    {
+      "underlying_symbol": "DELAY",
+      "quote_version": 1,
+      "event_time": "2026-06-19T19:59:55Z",
+      "ingestion_time": "2026-06-19T19:59:56Z",
+      "bid": "99.95",
+      "ask": "100.05",
+      "last_price": "100.00",
+      "source_id": "synthetic_nbbo",
+      "source_sequence": 3001,
+      "schema_version": "1.0.0"
+    }
+  ],
+  "snapshots": [
+    {
+      "snapshot_id": "NOUND-20260619T200000Z",
+      "underlying_symbol": "NOUND",
+      "snapshot_time": "2026-06-19T20:00:00Z",
+      "ingestion_time": "2026-06-19T20:00:02Z",
+      "source_id": "synthetic_int_feed",
+      "schema_version": "1.0.0",
+      "quotes": [
+        {
+          "option_id": "OPT:NOUND:20270619:C:100.0000",
+          "quote_version": 1,
+          "underlying_symbol": "NOUND",
+          "reported_strike": "100.00",
+          "event_time": "2026-06-19T19:59:58Z",
+          "ingestion_time": "2026-06-19T20:00:01Z",
+          "bid": "10.400584",
+          "ask": "10.500584",
+          "bid_size": 50,
+          "ask_size": 50,
+          "source_id": "synthetic_int_feed",
+          "source_sequence": 7001,
+          "schema_version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "snapshot_id": "DELAY-20260619T200000Z",
+      "underlying_symbol": "DELAY",
+      "snapshot_time": "2026-06-19T20:00:00Z",
+      "ingestion_time": "2026-06-19T20:02:05Z",
+      "source_id": "synthetic_int_feed",
+      "schema_version": "1.0.0",
+      "quotes": [
+        {
+          "option_id": "OPT:DELAY:20270619:C:100.0000",
+          "quote_version": 1,
+          "underlying_symbol": "DELAY",
+          "reported_strike": "100.00",
+          "event_time": "2026-06-19T19:59:55Z",
+          "ingestion_time": "2026-06-19T20:02:00Z",
+          "bid": "10.80",
+          "ask": "10.20",
+          "bid_size": 10,
+          "ask_size": 10,
+          "source_id": "synthetic_int_feed",
+          "source_sequence": 7002,
+          "schema_version": "1.0.0"
+        },
+        {
+          "option_id": "OPT:DELAY:20270619:C:100.0000",
+          "quote_version": 2,
+          "underlying_symbol": "DELAY",
+          "reported_strike": "100.00",
+          "event_time": "2026-06-19T19:59:58Z",
+          "ingestion_time": "2026-06-19T20:02:01Z",
+          "bid": "10.400584",
+          "ask": "10.500584",
+          "bid_size": 40,
+          "ask_size": 40,
+          "source_id": "synthetic_int_feed",
+          "source_sequence": 7003,
+          "schema_version": "1.0.0"
+        },
+        {
+          "option_id": "OPT:DELAY:20270619:P:100.0000",
+          "quote_version": 1,
+          "underlying_symbol": "DELAY",
+          "reported_strike": "100.00",
+          "event_time": "2026-06-19T19:50:00Z",
+          "ingestion_time": "2026-06-19T20:02:02Z",
+          "bid": "5.523526",
+          "ask": "5.623526",
+          "bid_size": 30,
+          "ask_size": 30,
+          "source_id": "synthetic_int_feed",
+          "source_sequence": 7004,
+          "schema_version": "1.0.0"
+        }
+      ]
+    }
+  ]
+}

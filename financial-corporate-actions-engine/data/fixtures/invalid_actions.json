@@ -1,0 +1,112 @@
+{
+  "invalid_cases": [
+    {
+      "case_name": "negative_split_ratio",
+      "expected_error": "VALIDATION_ERROR",
+      "event": {
+        "action_id": "CA-BAD-01",
+        "version": 1,
+        "revision_type": "NEW",
+        "action_type": "SPLIT",
+        "security_id": "SEC-ACME",
+        "symbol": "ACME",
+        "announcement_date": "2025-01-03",
+        "ex_date": "2025-01-06",
+        "ratio_numerator": "-2",
+        "ratio_denominator": "1",
+        "event_time": "2025-01-03T12:00:00Z",
+        "ingestion_time": "2025-01-03T12:05:00Z",
+        "availability_time": "2025-01-03T12:10:00Z",
+        "source": "synthetic-bad-feed",
+        "lineage_id": "LIN-BAD-01",
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "case_name": "pay_date_before_ex_date",
+      "expected_error": "VALIDATION_ERROR",
+      "event": {
+        "action_id": "CA-BAD-02",
+        "version": 1,
+        "revision_type": "NEW",
+        "action_type": "CASH_DIVIDEND",
+        "security_id": "SEC-ACME",
+        "symbol": "ACME",
+        "announcement_date": "2025-01-03",
+        "ex_date": "2025-01-10",
+        "pay_date": "2025-01-08",
+        "cash_amount": "1.00",
+        "currency": "USD",
+        "event_time": "2025-01-03T12:00:00Z",
+        "ingestion_time": "2025-01-03T12:05:00Z",
+        "availability_time": "2025-01-03T12:10:00Z",
+        "source": "synthetic-bad-feed",
+        "lineage_id": "LIN-BAD-02",
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "case_name": "unsupported_schema_version",
+      "expected_error": "SCHEMA_VERSION_ERROR",
+      "event": {
+        "action_id": "CA-BAD-03",
+        "version": 1,
+        "revision_type": "NEW",
+        "action_type": "SPLIT",
+        "security_id": "SEC-ACME",
+        "symbol": "ACME",
+        "announcement_date": "2025-01-03",
+        "ex_date": "2025-01-06",
+        "ratio_numerator": "2",
+        "ratio_denominator": "1",
+        "event_time": "2025-01-03T12:00:00Z",
+        "ingestion_time": "2025-01-03T12:05:00Z",
+        "availability_time": "2025-01-03T12:10:00Z",
+        "source": "synthetic-bad-feed",
+        "lineage_id": "LIN-BAD-03",
+        "schema_version": "9.9.9"
+      }
+    },
+    {
+      "case_name": "symbol_change_identical_ticker",
+      "expected_error": "VALIDATION_ERROR",
+      "event": {
+        "action_id": "CA-BAD-04",
+        "version": 1,
+        "revision_type": "NEW",
+        "action_type": "SYMBOL_CHANGE",
+        "security_id": "SEC-ACME",
+        "symbol": "ACME",
+        "new_symbol": "ACME",
+        "announcement_date": "2025-01-03",
+        "ex_date": "2025-01-06",
+        "event_time": "2025-01-03T12:00:00Z",
+        "ingestion_time": "2025-01-03T12:05:00Z",
+        "availability_time": "2025-01-03T12:10:00Z",
+        "source": "synthetic-bad-feed",
+        "lineage_id": "LIN-BAD-04",
+        "schema_version": "1.0.0"
+      }
+    },
+    {
+      "case_name": "unsupported_spinoff_strict",
+      "expected_error": "UNSUPPORTED_ACTION",
+      "event": {
+        "action_id": "CA-BAD-05",
+        "version": 1,
+        "revision_type": "NEW",
+        "action_type": "SPINOFF",
+        "security_id": "SEC-ACME",
+        "symbol": "ACME",
+        "announcement_date": "2025-01-03",
+        "ex_date": "2025-01-09",
+        "event_time": "2025-01-03T12:00:00Z",
+        "ingestion_time": "2025-01-03T12:05:00Z",
+        "availability_time": "2025-01-03T12:10:00Z",
+        "source": "synthetic-bad-feed",
+        "lineage_id": "LIN-BAD-05",
+        "schema_version": "1.0.0"
+      }
+    }
+  ]
+}

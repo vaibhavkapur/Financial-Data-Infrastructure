@@ -1,0 +1,98 @@
+{
+  "environment": {
+    "cpu_count": 10,
+    "executable": "/Applications/Xcode.app/Contents/Developer/usr/bin/python3",
+    "machine": "arm64",
+    "optional_packages": {
+      "dask": null,
+      "distributed": null,
+      "numpy": null,
+      "psycopg": null,
+      "pyarrow": null,
+      "pytest": null,
+      "ray": null
+    },
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "python_implementation": "CPython",
+    "python_version": "3.9.6"
+  },
+  "local_distributed_parity": {
+    "bit_exact_match": true,
+    "distributed_aggregate_sha256": "48a9ab3e3527ca79e2d3d20eeb3b0058393b267755c6362cc8931c04d09cd600",
+    "distributed_best_trial_id": "trial-0012-2bd40d243303",
+    "distributed_duplicate_completed_trials": 0,
+    "distributed_run_id": "demo-sweep-distributed-4w",
+    "distributed_wall_seconds": 0.215445,
+    "local_aggregate_sha256": "48a9ab3e3527ca79e2d3d20eeb3b0058393b267755c6362cc8931c04d09cd600",
+    "local_best_trial_id": "trial-0012-2bd40d243303",
+    "local_duplicate_completed_trials": 0,
+    "local_run_id": "demo-sweep-local",
+    "local_wall_seconds": 0.305564
+  },
+  "oracle_comparison": {
+    "all_within_tolerance": true,
+    "metrics": {
+      "annualized_return": {
+        "abs_diff": 0.0,
+        "actual": -0.9547176949,
+        "expected": -0.9547176949,
+        "within_tol": true
+      },
+      "annualized_volatility": {
+        "abs_diff": 0.0,
+        "actual": 0.5193141871,
+        "expected": 0.5193141871,
+        "within_tol": true
+      },
+      "bars_evaluated": {
+        "abs_diff": 0.0,
+        "actual": 6,
+        "expected": 6,
+        "within_tol": true
+      },
+      "final_equity": {
+        "abs_diff": 0.0,
+        "actual": 9404.41780842,
+        "expected": 9404.41780842,
+        "within_tol": true
+      },
+      "max_drawdown": {
+        "abs_diff": 0.0,
+        "actual": 0.0763962264,
+        "expected": 0.0763962264,
+        "within_tol": true
+      },
+      "sharpe_ratio": {
+        "abs_diff": 0.0,
+        "actual": -5.652344743,
+        "expected": -5.652344743,
+        "within_tol": true
+      },
+      "total_return": {
+        "abs_diff": 0.0,
+        "actual": -0.0595582192,
+        "expected": -0.0595582192,
+        "within_tol": true
+      },
+      "trade_count": {
+        "abs_diff": 0.0,
+        "actual": 2,
+        "expected": 2,
+        "within_tol": true
+      },
+      "turnover": {
+        "abs_diff": 0.0,
+        "actual": 2.0,
+        "expected": 2.0,
+        "within_tol": true
+      },
+      "win_rate": {
+        "abs_diff": 0.0,
+        "actual": 0.3333333333,
+        "expected": 0.3333333333,
+        "within_tol": true
+      }
+    },
+    "tolerance": 1e-08
+  }
+}
